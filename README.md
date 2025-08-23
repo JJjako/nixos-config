@@ -1,7 +1,7 @@
 <h1 align="center">
    <img src="./.github/assets/logo/nixos-logo.png  " width="100px" /> 
    <br>
-      Frost-Phoenix's Flakes 
+      JJ_jako's Flakes 
    <br>
       <img src="./.github/assets/pallet/pallet-0.png" width="600px" /> <br>
 
@@ -379,7 +379,7 @@ First install nixos using any [graphical ISO image](https://nixos.org/download.h
 
 ```bash
 nix-shell -p git
-git clone https://github.com/Frost-Phoenix/nixos-config
+git clone https://github.com/JJjako/nixos-config
 cd nixos-config
 ```
 #### 3. **Install script**
