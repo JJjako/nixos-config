@@ -150,10 +150,10 @@ in
         # keybindings
         
  
-        "$mainMod T, exec,  ${terminal}"
+        "$mainMod T, exec,  ${terminal} -d ~/nixos-config"
         "$mainMod, B, exec, [workspace 1 silent] ${browser}"
         "$mainMod, Q, killactive,"
-        "$mainMod, M, exec, kitty -e update"
+        "$mainMod, M, exec, kitty -d ~/nixos-config -e update"
         "$mainMod, D, exec, rofi -show drun || pkill rofi"
         "$mainMod SHIFT, D, exec, webcord --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "$mainMod, Escape, exec, swaylock"
