@@ -407,8 +407,8 @@ Even though I use home manager, there is still a little bit of manual configurat
 ```nix
 programs.git = {
    ...
-   userName = "Frost-Phoenix";
-   userEmail = "67cyril6767@gmail.com";
+   userName = "JJjako";
+   userEmail = "jakob.wiinkler@gmail.com";
    ...
 };
 ```
