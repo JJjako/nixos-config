@@ -1,15 +1,15 @@
 <h1 align="center">
    <img src="./.github/assets/logo/nixos-logo.png  " width="100px" /> 
    <br>
-      Frost-Phoenix's Flakes 
+      JJ_jako's Flakes 
    <br>
       <img src="./.github/assets/pallet/pallet-0.png" width="600px" /> <br>
 
    <div align="center">
       <p></p>
       <div align="center">
-         <a href="https://github.com/Frost-Phoenix/nixos-config/stargazers">
-            <img src="https://img.shields.io/github/stars/Frost-Phoenix/nixos-config?color=FABD2F&labelColor=282828&style=for-the-badge&logo=starship&logoColor=FABD2F">
+         <a href="https://github.com/JJjako/nixos-config/stargazers">
+            <img src="https://img.shields.io/github/stars/JJjako/nixos-config?color=FABD2F&labelColor=282828&style=for-the-badge&logo=starship&logoColor=FABD2F">
          </a>
          <a href="https://github.com/Frost-Phoenix/nixos-config/">
             <img src="https://img.shields.io/github/repo-size/Frost-Phoenix/nixos-config?color=B16286&labelColor=282828&style=for-the-badge&logo=github&logoColor=B16286">
@@ -379,7 +379,7 @@ First install nixos using any [graphical ISO image](https://nixos.org/download.h
 
 ```bash
 nix-shell -p git
-git clone https://github.com/Frost-Phoenix/nixos-config
+git clone https://github.com/JJjako/nixos-config
 cd nixos-config
 ```
 #### 3. **Install script**
