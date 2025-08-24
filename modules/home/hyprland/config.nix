@@ -149,8 +149,8 @@ in
 
         # keybindings
         
- 
-        "$mainMod T, exec,  ${terminal} -d ~/nixos-config"
+        "$mainMod, K, exec, file_chooser"
+        "$mainMod, T, exec,  ${terminal} -d ~/nixos-config"
         "$mainMod, B, exec, [workspace 1 silent] ${browser}"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exec, kitty -d ~/nixos-config -e update"

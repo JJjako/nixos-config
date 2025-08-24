@@ -40,6 +40,7 @@
   '';
 
   programs.zsh.shellAliases = {
+    sn = "sudo nano";
     g = "lazygit";
     gf = "onefetch --number-of-file-churns 0 --no-color-palette";
     ga = "git add";
