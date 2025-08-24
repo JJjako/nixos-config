@@ -52,7 +52,9 @@ if [[ $choice == "r" ]]; then
 # Fetch and pull latest changes
     git fetch --all
     git pull --rebase
-
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    LATEST_COMMIT=$(git log -1 --pretty=format:"%h - %s")
+    notify-send "Git Update" "Branch: $CURRENT_BRANCH\nLatest: $LATEST_COMMIT"
 # Optional: notify or print status
     git status
     echo "✅ Changes committed."
