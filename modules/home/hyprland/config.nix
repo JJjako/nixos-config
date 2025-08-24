@@ -1,7 +1,7 @@
 { ... }:
 let
-  browser = "zen-beta";
-  terminal = "ghostty";
+  browser = "firefox";
+  terminal = "kitty";
 in
 {
   wayland.windowManager.hyprland = {
@@ -45,11 +45,11 @@ in
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 6;
-        gaps_out = 12;
+        gaps_in = 3;
+        gaps_out = 4;
         border_size = 2;
-        "col.active_border" = "rgb(98971A) rgb(CC241D) 45deg";
-        "col.inactive_border" = "0x00000000";
+        col.active_border = "rgb(98971A) rgb(CC241D) 45deg";
+        col.inactive_border = "0x00000000";
         # border_part_of_window = false;
         no_border_on_floating = false;
       };
