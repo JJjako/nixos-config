@@ -18,4 +18,4 @@ for f in "${files[@]}"; do
     fi
 done
 
-[ -n "$fullpath" ] && nano "$fullpath"
+[ -n "$fullpath" ] && kitty -e sudo nano "$fullpath"
