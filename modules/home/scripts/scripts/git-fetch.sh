@@ -1,13 +1,8 @@
-REPO_PATH="~/nixos-config"
+REPO_PATH="/nixos-config"
 
 # Check if it's a Git repository
-if [ ! -d "$REPO_PATH/.git" ]; then
-    notify-send "Git Update" "Error: $REPO_PATH is not a Git repository."
-    exit 1
-fi
-
 # Move to the repo
-cd "$REPO_PATH" || exit 1
+cd "$REPO_PATH"
 
 # Fetch latest changes
 git fetch --all
