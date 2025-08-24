@@ -20,7 +20,7 @@ in
         "swaync &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "swww-daemon &"
-
+        "git-fetch"
         "hyprlock"
 
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
@@ -148,27 +148,21 @@ in
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, ${terminal} --gtk-single-instance=true"
-        "ALT, Return, exec, [float; size 1111 700] ${terminal}"
-        "$mainMod SHIFT, Return, exec, [fullscreen] ${terminal}"
+        
+ 
+        "$mainMod T, exec,  ${terminal}"
         "$mainMod, B, exec, [workspace 1 silent] ${browser}"
         "$mainMod, Q, killactive,"
-        "$mainMod, F, fullscreen, 0"
-        "$mainMod SHIFT, F, fullscreen, 1"
-        "$mainMod, Space, exec, toggle-float"
+        "$mainMod, M, exec, update"
         "$mainMod, D, exec, rofi -show drun || pkill rofi"
         "$mainMod SHIFT, D, exec, webcord --enable-features=UseOzonePlatform --ozone-platform=wayland"
-        "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
         "$mainMod, Escape, exec, swaylock"
         "ALT, Escape, exec, hyprlock"
         "$mainMod SHIFT, Escape, exec, power-menu"
-        "$mainMod, P, pseudo,"
         "$mainMod, X, togglesplit,"
-        "$mainMod, T, exec, toggle-oppacity"
         "$mainMod, E, exec, nemo"
         "ALT, E, exec, hyprctl dispatch exec '[float; size 1111 700] nemo'"
         "$mainMod SHIFT, B, exec, toggle-waybar"
-        "$mainMod, C ,exec, hyprpicker -a"
         "$mainMod, W,exec, wallpaper-picker"
         "$mainMod SHIFT, W,exec, hyprctl dispatch exec '[float; size 925 615] waypaper'"
         "$mainMod, N, exec, swaync-client -t -sw"
@@ -177,7 +171,7 @@ in
         # "$mainMod SHIFT, W, exec, vm-start"
 
         # screenshot
-        ",Print, exec, screenshot --copy"
+        "$mainMod, C, exec, screenshot --copy"
         "$mainMod, Print, exec, screenshot --save"
         "$mainMod SHIFT, Print, exec, screenshot --swappy"
 
@@ -186,19 +180,11 @@ in
         "$mainMod, right, movefocus, r"
         "$mainMod, up,    movefocus, u"
         "$mainMod, down,  movefocus, d"
-        "$mainMod, h, movefocus, l"
-        "$mainMod, j, movefocus, d"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, l, movefocus, r"
 
         "$mainMod, left,  alterzorder, top"
         "$mainMod, right, alterzorder, top"
         "$mainMod, up,    alterzorder, top"
         "$mainMod, down,  alterzorder, top"
-        "$mainMod, h, alterzorder, top"
-        "$mainMod, j, alterzorder, top"
-        "$mainMod, k, alterzorder, top"
-        "$mainMod, l, alterzorder, top"
 
         "CTRL ALT, up, exec, hyprctl dispatch focuswindow floating"
         "CTRL ALT, down, exec, hyprctl dispatch focuswindow tiled"
@@ -233,28 +219,16 @@ in
         "$mainMod SHIFT, right, movewindow, r"
         "$mainMod SHIFT, up, movewindow, u"
         "$mainMod SHIFT, down, movewindow, d"
-        "$mainMod SHIFT, h, movewindow, l"
-        "$mainMod SHIFT, j, movewindow, d"
-        "$mainMod SHIFT, k, movewindow, u"
-        "$mainMod SHIFT, l, movewindow, r"
 
         "$mainMod CTRL, left, resizeactive, -80 0"
         "$mainMod CTRL, right, resizeactive, 80 0"
         "$mainMod CTRL, up, resizeactive, 0 -80"
         "$mainMod CTRL, down, resizeactive, 0 80"
-        "$mainMod CTRL, h, resizeactive, -80 0"
-        "$mainMod CTRL, j, resizeactive, 0 80"
-        "$mainMod CTRL, k, resizeactive, 0 -80"
-        "$mainMod CTRL, l, resizeactive, 80 0"
 
         "$mainMod ALT, left, moveactive,  -80 0"
         "$mainMod ALT, right, moveactive, 80 0"
         "$mainMod ALT, up, moveactive, 0 -80"
         "$mainMod ALT, down, moveactive, 0 80"
-        "$mainMod ALT, h, moveactive,  -80 0"
-        "$mainMod ALT, j, moveactive, 0 80"
-        "$mainMod ALT, k, moveactive, 0 -80"
-        "$mainMod ALT, l, moveactive, 80 0"
 
         # media and volume controls
         # ",XF86AudioMute,exec, pamixer -t"
