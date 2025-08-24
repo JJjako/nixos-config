@@ -62,3 +62,4 @@ elif [[ $choice == "x" ]]; then
 else
     echo "Exiting."
 fi
+read
