@@ -1,4 +1,4 @@
-REPO_PATH="/nixos-config"
+REPO_PATH="$HOME/nixos-config"
 
 # Check if it's a Git repository
 # Move to the repo
