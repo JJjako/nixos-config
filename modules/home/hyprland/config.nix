@@ -153,7 +153,7 @@ in
         "$mainMod T, exec,  ${terminal}"
         "$mainMod, B, exec, [workspace 1 silent] ${browser}"
         "$mainMod, Q, killactive,"
-        "$mainMod, M, exec, update"
+        "$mainMod, M, exec, kitty -e update"
         "$mainMod, D, exec, rofi -show drun || pkill rofi"
         "$mainMod SHIFT, D, exec, webcord --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "$mainMod, Escape, exec, swaylock"
