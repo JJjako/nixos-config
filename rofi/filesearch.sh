@@ -2,20 +2,27 @@
 
 FOLDER="$HOME/nixos-config"
 
-mapfile -t files < <(find "$FOLDER" -type f -name "*.nix" -o -name "*.sh")
+# Find text-related files
+mapfile -t files < <(find "$FOLDER" -type f \( -name "*.sh" -o -name "*.md" -o -name "*.nix" \))
 
-names=()
+# Build menu entries: filename + [parent folder]
+entries=()
 for f in "${files[@]}"; do
-    names+=("$(basename "$f")")
+    name=$(basename "$f")
+    parent=$(basename "$(dirname "$f")")
+    entries+=("$name [$parent]")
 done
 
-selected=$(printf '%s\n' "${names[@]}" | rofi -dmenu -i -p "Text files:")
+# Show Rofi menu
+selected=$(printf '%s\n' "${entries[@]}" | rofi -dmenu -i -p "Text files:")
 
-for f in "${files[@]}"; do
-    if [[ "$(basename "$f")" == "$selected" ]]; then
-        fullpath="$f"
+# Find matching file
+for i in "${!entries[@]}"; do
+    if [[ "${entries[$i]}" == "$selected" ]]; then
+        fullpath="${files[$i]}"
         break
     fi
 done
 
+# Open in nano (or change to your editor)
 [ -n "$fullpath" ] && kitty -e sudo nano "$fullpath"
