@@ -1,0 +1,7 @@
+
+System_config	kitty -e sudo nano ~/nixos-config/modules/core/system.nix
+Hyprland_config	kitty -e sudo nano ~/nixos-config/modules/home/hyprland/config.nix
+Nix-search	kitty -d ~/nixos-config/modules/home/nix-search -e ./nix-search.sh
+Config-search	(cd ~/nixos-config/rofi && ./filesearch.sh)
+Choice	kitty -e sudo nano ~/nixos-config/rofi/auswahl.tsv
+Update	kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./update.sh

@@ -151,7 +151,7 @@ in
         "$mainMod, T, exec,  ${terminal} -d ~/nixos-config"
         "$mainMod, B, exec, [workspace 1 silent] ${browser}"
         "$mainMod, Q, killactive,"
-        "$mainMod, M, exec, (cd ~/rofi && ./auswahl)"
+        "$mainMod, M, exec, (cd ~/nixos-config/rofi && ./auswahl)"
         "$mainMod, D, exec, rofi -show drun || pkill rofi"
         "$mainMod SHIFT, D, exec, webcord --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "$mainMod, Escape, exec, swaylock"
