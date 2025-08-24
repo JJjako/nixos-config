@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-
 # Detect hostname → use correct flake target
 HOST=$(hostname)
 if [[ $HOST == "desktop" ]]; then
@@ -38,7 +37,26 @@ if [[ $choice == "r" ]]; then
     cd ~/nixos-config || exit 1
     git add .
     git commit -m "Update NixOS config ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')"
+    git push
+    REPO_PATH="$HOME/nixos-config"
+
+# Make sure it's a Git repository
+    if [ ! -d "$REPO_PATH/.git" ]; then
+        echo "Error: $REPO_PATH is not a Git repository."
+        exit 1
+    fi
+
+# Go to the repository
+    cd "$REPO_PATH" || exit 1
+
+# Fetch and pull latest changes
+    git fetch --all
+    git pull --rebase
+
+# Optional: notify or print status
+    git status
     echo "✅ Changes committed."
+   
 elif [[ $choice == "x" ]]; then
     echo "❌ Exiting without commit."
 else
