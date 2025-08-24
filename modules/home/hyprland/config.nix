@@ -148,12 +148,10 @@ in
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        
-        "$mainMod, K, exec, file_chooser"
         "$mainMod, T, exec,  ${terminal} -d ~/nixos-config"
         "$mainMod, B, exec, [workspace 1 silent] ${browser}"
         "$mainMod, Q, killactive,"
-        "$mainMod, M, exec, kitty -d ~/nixos-config -e update"
+        "$mainMod, M, exec, (cd ~/rofi && ./auswahl)"
         "$mainMod, D, exec, rofi -show drun || pkill rofi"
         "$mainMod SHIFT, D, exec, webcord --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "$mainMod, Escape, exec, swaylock"
