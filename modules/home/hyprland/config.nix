@@ -29,10 +29,10 @@ in
       ];
 
       input = {
-        kb_layout = "us,fr";
-        kb_options = "grp:alt_caps_toggle";
+        kb_layout = "de,us";
+        #kb_options = "grp:alt_caps_toggle";
         numlock_by_default = true;
-        repeat_delay = 300;
+	        repeat_delay = 300;
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
@@ -81,7 +81,7 @@ in
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 5;
         # active_opacity = 0.90;
         # inactive_opacity = 0.90;
         # fullscreen_opacity = 1.0;

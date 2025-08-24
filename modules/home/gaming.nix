@@ -15,9 +15,7 @@
     vitetris
     nethack
 
-    ## Celeste
-    celeste-classic
-    celeste-classic-pm
+
 
     ## Doom
     # gzdoom
