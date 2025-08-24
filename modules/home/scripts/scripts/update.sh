@@ -27,7 +27,7 @@ if hyprctl reload; then
 else
     echo "Could not reload Hyprland (is it running?)"
 fi
-
+echo "Collecting Garbage..."
 echo -e "\nUpdate complete."
 echo "Press [Enter] to exit, [r] to commit config, [x] to quit without commit."
 
