@@ -107,6 +107,15 @@ in
       format-linked = "{ifname} (No IP)";
       format-disconnected = "<span foreground='${magenta}'>󰖪 </span>";
     };
+    bluetooth = {
+        format =  " {status}";
+	format-connected = " {device_alias}";
+	format-connected-battery = " {device_alias} {device_battery_percentage}%";
+	tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+	tooltip-format-connected =  "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+	tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+	tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+    };
     tray = {
       icon-size = 20;
       spacing = 8;
@@ -153,7 +162,8 @@ in
       on-click-right = "rofi -show drun";
       tooltip = "true";
       tooltip-format = "Random Wallpaper";
-    };
+         
+};
     "custom/notification" = {
       tooltip = false;
       format = "{icon} ";

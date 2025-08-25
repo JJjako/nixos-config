@@ -30,7 +30,7 @@
     firefox
     wget
     git
-    bluetui
+    blueman
   ];
 
   time.timeZone = "Europe/Paris";
