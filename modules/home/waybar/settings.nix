@@ -39,6 +39,7 @@ in
       "memory"
       "disk"
       "pulseaudio"
+      (if (host == "laptop") then "bluetooth" else "")
       "network"
       "battery"
       "hyprland/language"
@@ -116,7 +117,7 @@ in
       format-icons = {
         default = [ "<span foreground='${blue}'> </span>" ];
       };
-      scroll-step = -2;
+      scroll-step = 2;
       on-click = "pamixer -t";
       on-click-right = "pavucontrol";
     };
