@@ -157,13 +157,13 @@ in
       tooltip = false;
       format = "{icon} ";
       format-icons = {
-        notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
         none = "  <span foreground='${red}'></span>";
-        dnd-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        dnd-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
         dnd-none = "  <span foreground='${red}'></span>";
-        inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
         inhibited-none = "  <span foreground='${red}'></span>";
-        dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
         dnd-inhibited-none = "  <span foreground='${red}'></span>";
       };
       return-type = "json";
