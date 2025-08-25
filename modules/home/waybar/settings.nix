@@ -116,7 +116,7 @@ in
       format-icons = {
         default = [ "<span foreground='${blue}'> </span>" ];
       };
-      scroll-step = 2;
+      scroll-step = -2;
       on-click = "pamixer -t";
       on-click-right = "pavucontrol";
     };
@@ -144,6 +144,7 @@ in
       format = "<span foreground='#FABD2F'> </span> {}";
       format-fr = "FR";
       format-en = "US";
+      format-de = "DE";
     };
     "custom/launcher" = {
       format = "";
