@@ -28,6 +28,10 @@
 
   environment.systemPackages = with pkgs; [
     firefox
+    rustc
+    whatsie
+    cargo
+    vscode
     wget
     git
     blueman
