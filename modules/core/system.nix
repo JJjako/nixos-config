@@ -28,8 +28,6 @@
 
   environment.systemPackages = with pkgs; [
     firefox
-    rustc
-    cargo    
     whatsie
     vscode
     wget
