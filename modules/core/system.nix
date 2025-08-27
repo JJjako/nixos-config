@@ -27,7 +27,9 @@
   };
 
   environment.systemPackages = with pkgs; [
+    drawio
     firefox
+    rustup
     whatsie
     vscode
     wget

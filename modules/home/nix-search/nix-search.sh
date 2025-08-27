@@ -104,6 +104,8 @@ NIX_SHELL_CMD="$NIX_SHELL_CMD | tr -d \"\'\")"
 PREVIEW_WINDOW="wrap"
 [ "$(tput cols)" -lt 90 ] && PREVIEW_WINDOW="$PREVIEW_WINDOW,up"
 
+ADD_TO_SYSTEM_KEY="ctrl-p"
+ADD_SCRIPT="/home/jw/nixos-config/modules/home/scripts/scripts/add_package.sh"
 eval "$CMD print --indexes nixpkgs | fzf \
     --prompt 'nixpkgs> ' \
     --preview '$CMD preview \$(cat $STATE_FILE) {}' \
@@ -111,10 +113,11 @@ eval "$CMD print --indexes nixpkgs | fzf \
     --bind '$OPEN_HOMEPAGE_KEY:execute($CMD homepage \$(cat $STATE_FILE) {} | xargs $OPENER)' \
     --bind $'$SEARCH_SNIPPET_KEY:execute($SEARCH_SNIPPET_CMD | xargs $OPENER)' \
     --bind $'$NIX_SHELL_KEY:become($NIX_SHELL_CMD)' \
+    --bind 'enter:execute(echo {} | sed \"s:nixpkgs\/::\" | xargs $ADD_SCRIPT)+abort' \
     --layout reverse \
     --scheme history \
     --preview-window='$PREVIEW_WINDOW' \
-    --header '$HEADER' \
+    --header \"$HEADER\nenter - add to system.nix\" \
     --header-first \
     --header-border \
     --header-label \"Help\" \
