@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    myfitnesspal
     elmPackages.nodejs
     drawio
     firefox
