@@ -70,8 +70,8 @@ in
         "6" = "VI";
         "7" = "VII";
         "8" = "VIII";
-        "9" = "IX";
-        "10" = "X";
+        "9" = "W";
+        "10" = "D";
         sort-by-number = true;
       };
       persistent-workspaces = {
