@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    elmPackages.nodejs
     drawio
     firefox
     rustup
