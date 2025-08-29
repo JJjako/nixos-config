@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    spotify
     myfitnesspal
     elmPackages.nodejs
     drawio
