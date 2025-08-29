@@ -13,4 +13,4 @@ fi
 sed -i "/environment\.systemPackages = with pkgs; \[/a\ \ \ \ $PKG" "$SYSTEM_NIX"
 echo "✅ Added $PKG to $SYSTEM_NIX"
 notify-send "Package Added" "Added $PKG to $SYSTEM_NIX"
-hyprctl dispatch exec "[silent workspace 8] kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./update.sh"
+hyprctl dispatch exec "[workspace 8 silent] kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./update.sh r"
