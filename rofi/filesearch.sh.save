@@ -3,7 +3,7 @@
 FOLDER="$HOME/nixos-config"
 
 # Find text-related files
-mapfile -t files < <(find "$FOLDER" -type f \( -name "*.sh" -o -name "*.md" -o -name "*.nix" -o -name "auswahl" -o -name "*.tsv" \))
+mapfile -t files < <(find "$FOLDER" -type f \( -name "*.sh" -o -name "*.md" -o -name "*.nix" -o -name "auswahl" \))
 
 # Build menu entries: filename + [parent folder]
 entries=()

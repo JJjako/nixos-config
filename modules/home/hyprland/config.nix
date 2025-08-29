@@ -152,7 +152,7 @@ in
         # keybindings
         "$mainMod, L , exec, lofi"
 	"$mainMod, T, exec,  ${terminal} -d ~/nixos-config"
-        "$mainMod, B, exec, [workspace 1 silent] ${browser}"
+        "$mainMod, B, exec, ${browser}"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exec, (cd ~/nixos-config/rofi && ./auswahl)"
         "$mainMod, D, exec, rofi -show drun || pkill rofi"
