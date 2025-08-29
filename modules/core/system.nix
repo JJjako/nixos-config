@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    qlcplus
     spotify
     myfitnesspal
     elmPackages.nodejs

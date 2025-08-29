@@ -28,6 +28,7 @@ else
 fi
 echo "Collecting Garbage..."
 echo -e "\nUpdate complete."
+notify-send "Update complete"
 echo "Press [Enter] to exit, [r] to commit config, [x] to quit without commit."
 
 read -n 1 -r choice
