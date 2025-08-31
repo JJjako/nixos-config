@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    google-chrome
     netflix
     qlcplus
     spotify
