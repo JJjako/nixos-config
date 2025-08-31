@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    netflix
     qlcplus
     spotify
     myfitnesspal
