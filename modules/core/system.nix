@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    rustlings
     google-chrome
     netflix
     qlcplus
