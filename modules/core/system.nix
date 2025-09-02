@@ -27,6 +27,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    steamcmd
+    steam
     rustlings
     google-chrome
     netflix
