@@ -148,6 +148,7 @@ in
       bind = [
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
+        "$mainMod, SPACE, togglefloating"
 
         # keybindings
         "$mainMod, L , exec, lofi"
