@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    python313Full
     steamcmd
     steam
     rustlings
