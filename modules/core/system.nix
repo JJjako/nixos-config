@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    python313Packages.conda
     jetbrains.pycharm-community-src
     python313Full
     steamcmd
