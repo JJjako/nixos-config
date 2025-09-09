@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    jetbrains.pycharm-community-src
     python313Full
     steamcmd
     steam
