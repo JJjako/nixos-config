@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    ly
     way-displays
     rPackages.AutoDeskR
     python313Packages.conda
