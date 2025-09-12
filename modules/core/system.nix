@@ -27,9 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    ly
-    way-displays
-    rPackages.AutoDeskR
+    wdisplays
     python313Packages.conda
     jetbrains.pycharm-community-src
     python313Full
