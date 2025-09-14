@@ -14,7 +14,9 @@
   programs.steam.enable = lib.mkForce true;
   programs.steam.remotePlay.openFirewall = lib.mkForce true;
   programs.steam.dedicatedServer.openFirewall = lib.mkForce true;
-
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1w"
+  ];
   nixpkgs.config.allowUnfreePredicate = pkg:
     lib.elem (lib.getName pkg) [
       "steam"

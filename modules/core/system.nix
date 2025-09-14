@@ -27,10 +27,11 @@
   };
 
   environment.systemPackages = with pkgs; [
+    gcc
     wdisplays
     python313Packages.conda
     jetbrains.pycharm-community-src
-    sublime	
+    sublime4
     python313Full
     steamcmd
     steam
