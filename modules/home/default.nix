@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./manim.nix
     ./aseprite/aseprite.nix           # pixel art editor
     ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
