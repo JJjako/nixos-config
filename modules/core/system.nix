@@ -30,6 +30,7 @@
     wdisplays
     python313Packages.conda
     jetbrains.pycharm-community-src
+    sublime	
     python313Full
     steamcmd
     steam
