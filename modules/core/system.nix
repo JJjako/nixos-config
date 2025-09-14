@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    appimage-run
     gcc
     wdisplays
     python313Packages.conda
