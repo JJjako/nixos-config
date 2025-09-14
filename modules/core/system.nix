@@ -30,10 +30,7 @@
     appimage-run
     gcc
     wdisplays
-    python313Packages.conda
-    jetbrains.pycharm-community-src
     sublime4
-    python313Full
     steamcmd
     steam
     rustlings

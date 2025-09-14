@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./manim.nix
     ./bootloader.nix
     ./hardware.nix
     ./xserver.nix
