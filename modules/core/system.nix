@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    virtualbox    
     appimage-run
     gcc
     wdisplays
