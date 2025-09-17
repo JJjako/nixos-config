@@ -27,7 +27,7 @@ in
         "[workspace 1 silent] ${browser}"
         "[workspace 2 silent] ${terminal}"
   	"[workspace 9 silent] whatsie"
-	"[workspace 10 silent] vesktop"
+	"[workspace 0 silent] vesktop"
       ];
 
       input = {

@@ -45,7 +45,6 @@
     firefox
     rustup
     whatsie
-    vscode
     wget
     git
     blueman
