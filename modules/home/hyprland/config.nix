@@ -149,7 +149,7 @@ in
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
         "$mainMod, SPACE, togglefloating"
-
+	"CTRL ALT, C , exec, ~/.config/hyperland/macros/send_selection_to_kitty.py" 
         # keybindings
         "$mainMod, L , exec, lofi"
 	"$mainMod, T, exec,  ${terminal} -d ~/nixos-config"
@@ -190,6 +190,8 @@ in
 
         "CTRL ALT, up, exec, hyprctl dispatch focuswindow floating"
         "CTRL ALT, down, exec, hyprctl dispatch focuswindow tiled"
+	"CTRL ALT, left, workspace, e-1"
+	"CTRL ALT, down, workspace, e+1"
 
         # switch workspace
         "$mainMod, 1, workspace, 1"
@@ -226,7 +228,7 @@ in
         "$mainMod CTRL, right, resizeactive, 80 0"
         "$mainMod CTRL, up, resizeactive, 0 -80"
         "$mainMod CTRL, down, resizeactive, 0 80"
-
+        
         "$mainMod ALT, left, moveactive,  -80 0"
         "$mainMod ALT, right, moveactive, 80 0"
         "$mainMod ALT, up, moveactive, 0 -80"
