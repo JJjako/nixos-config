@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    wtype
     virtualbox    
     appimage-run
     gcc
