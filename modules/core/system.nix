@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    notion-app
     wtype
     virtualbox    
     appimage-run
@@ -50,7 +51,8 @@
     git
     blueman
   ];
-  nixpkgs.config.permittedInsecurePackages = [
+  nixpkgs.config.allowUnsupportedSystem = true;  
+nixpkgs.config.permittedInsecurePackages = [
                 "openssl-1.1.1w"
               ];
   time.timeZone = "Europe/Paris";
