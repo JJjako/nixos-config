@@ -27,7 +27,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    notion-app
     wtype
     virtualbox    
     appimage-run
@@ -50,8 +49,9 @@
     wget
     git
     blueman
-  ];
-  nixpkgs.config.allowUnsupportedSystem = true;  
+   
+  ]; 
+nixpkgs.config.allowUnsupportedSystem = true;  
 nixpkgs.config.permittedInsecurePackages = [
                 "openssl-1.1.1w"
               ];
