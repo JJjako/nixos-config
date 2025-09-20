@@ -49,7 +49,9 @@
     git
     blueman
   ];
-
+  nixpkgs.config.permittedInsecurePackages = [
+                "openssl-1.1.1w"
+              ];
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "de_DE.UTF-8";
   nixpkgs.config.allowUnfree = true;
