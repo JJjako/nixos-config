@@ -149,7 +149,7 @@ in
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
         "$mainMod, SPACE, togglefloating"
-	"CTRL ALT, C , exec, manim_to_terminal" 
+	"CTRL ALT, C , exec, ~/./nixos-config/modules/home/scripts/scripts/manim_to_terminal.sh" 
         # keybindings
         "$mainMod, L , exec, lofi"
 	"$mainMod, T, exec,  ${terminal} -d ~/nixos-config"
