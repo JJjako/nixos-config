@@ -149,7 +149,7 @@ in
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
         "$mainMod, SPACE, togglefloating"
-	"CTRL ALT, C , exec, ~/.config/hyperland/macros/send_selection_to_kitty.py" 
+	"CTRL ALT, C , exec, manim_to_terminal" 
         # keybindings
         "$mainMod, L , exec, lofi"
 	"$mainMod, T, exec,  ${terminal} -d ~/nixos-config"
