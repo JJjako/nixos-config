@@ -1,5 +1,5 @@
 Config	(cd ~/nixos-config/rofi && ./config)
 Config-search	(cd ~/nixos-config/rofi && ./filesearch.sh)
 Nix-search	kitty -d ~/nixos-config/modules/home/nix-search -e ./nix-search.sh
-Term	./~/nixos-config/rofi/term-rofi.sh
+Term	(cd ~/nixos-config/rofi && ./term-rofi.sh)
 Update	hyprctl dispatch exec "[workspace 8 silent] kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./update.sh"
