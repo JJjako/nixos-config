@@ -27,6 +27,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    teams
     wtype
     virtualbox    
     appimage-run
