@@ -5,7 +5,7 @@
   xdg.configFile."waypaper/config.ini".text = ''
     [Settings]
     language = en
-    folder = ~/Pictures/wallpapers/gruvbox-wallpapers/wallpapers
+    folder = ~/Pictures/wallpapers/minimalist-wallpapers
     subfolders = True
     monitors = All
     wallpaper = ~/Pictures/wallpapers/others/nixos.png

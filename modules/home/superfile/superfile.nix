@@ -9,6 +9,6 @@
     preview_width = 40
 
     [settings.preview]
-    image_quality = 100
+    image_quality = 70
   '';
 }

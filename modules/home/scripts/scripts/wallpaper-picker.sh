@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 wallpaper_path="$HOME/Pictures/wallpapers"
-wallpapers_folder="$HOME/Pictures/wallpapers/gruvbox-wallpapers"
+wallpapers_folder="$HOME/Pictures/wallpapers/minimalist-wallpapers"
 
 # Rekursiv alle Bilddateien finden
 mapfile -t wallpaper_list < <(find "$wallpapers_folder" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \))
