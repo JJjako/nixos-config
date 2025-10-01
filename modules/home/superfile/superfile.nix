@@ -8,7 +8,7 @@
   xdg.configFile."superfile/config.toml".text = ''
     [settings]
     image_preview = true
-    preview_width = 40
+    preview_width = 400
     # Du kannst hier noch weitere Superfile-Einstellungen hinzufügen
   '';
 }
