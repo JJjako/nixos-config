@@ -3,6 +3,7 @@
   programs.zsh = {
     shellAliases = {
       # Utils
+      sn = "subl";
       c = "clear";
       cd = "z";
       tt = "gtrash put";
