@@ -6,6 +6,7 @@
     [Settings]
     language = en
     folder = ~/Pictures/wallpapers/gruvbox-wallpapers
+    subfolders = True
     monitors = All
     wallpaper = ~/Pictures/wallpapers/others/nixos.png
     backend = swww
