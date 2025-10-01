@@ -2,7 +2,6 @@
 {
   programs.kitty = {
     enable = true;
-
     themeFile = "gruvbox-dark-hard";
 
     font = {
@@ -11,6 +10,7 @@
     };
 
     extraConfig = ''
+      enable_remote_control yes
       font_features MapleMono-Regular +ss01 +ss02 +ss04
       font_features MapleMono-Bold +ss01 +ss02 +ss04
       font_features MapleMono-Italic +ss01 +ss02 +ss04
