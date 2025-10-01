@@ -26,7 +26,7 @@
     overlays = [ inputs.nur.overlays.default ];
   };
   environment.variables = {
-     EDITOR = "subl";};
+     USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
     python3
     python3Packages.jupyterlab

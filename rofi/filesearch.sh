@@ -25,4 +25,4 @@ for i in "${!entries[@]}"; do
 done
 
 # Open in nano (or change to your editor)
-[ -n "$fullpath" ] && kitty -e sn "$fullpath"
+[ -n "$fullpath" ] && subl "$fullpath"
