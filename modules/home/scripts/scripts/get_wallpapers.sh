@@ -1,0 +1,1 @@
+kitty -e git clone https://github.com/JJjako/minimalist-wallpapers.git
