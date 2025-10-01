@@ -1,14 +1,14 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    superfile
-  ];
+  home.packages = with pkgs; [ superfile ];
 
   xdg.configFile."superfile/config.toml".text = ''
     [settings]
     image_preview = true
-    preview_width = 4000
-    # Du kannst hier noch weitere Superfile-Einstellungen hinzufügen
+    preview_width = 40
+
+    [settings.preview]
+    image_quality = 100
   '';
 }
