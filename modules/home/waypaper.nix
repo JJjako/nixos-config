@@ -13,7 +13,6 @@
     fill = fill
     sort = name
     color = #ffffff
-    subfolders = False
     show_hidden = False
     show_gifs_only = False
     post_command = pkill .waypaper-wrapp
