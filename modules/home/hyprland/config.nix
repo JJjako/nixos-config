@@ -162,7 +162,7 @@ in
         "ALT, Escape, exec, hyprlock"
         "$mainMod SHIFT, Escape, exec, power-menu"
         "$mainMod, X, togglesplit,"
-        "$mainMod, E, exec, nemo"
+        "$mainMod, E, exec, kitty -d nixos-config -e superfile"
         "ALT, E, exec, hyprctl dispatch exec '[float; size 1111 700] nemo'"
         "$mainMod SHIFT, B, exec, toggle-waybar"
         "$mainMod, W,exec, wallpaper-picker"
