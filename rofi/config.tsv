@@ -1,3 +1,3 @@
-System_config	kitty -e sudo nano ~/nixos-config/modules/core/system.nix
-Hyprland_config	kitty -e sudo nano ~/nixos-config/modules/home/hyprland/config.nix
+System_config	kitty -e sn ~/nixos-config/modules/core/system.nix
+Hyprland_config	kitty -e sn ~/nixos-config/modules/home/hyprland/config.nix
 
