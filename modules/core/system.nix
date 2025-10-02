@@ -28,6 +28,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    haskellPackages.timers
     python3
     python3Packages.jupyterlab
     python3Packages.networkx
