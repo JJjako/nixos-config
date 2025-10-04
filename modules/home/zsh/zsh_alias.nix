@@ -5,6 +5,7 @@
       # Utils
       ping = "gping";
       sn = "subl";
+      u = "update";
       c = "clear";
       cd = "z";
       tt = "gtrash put";
