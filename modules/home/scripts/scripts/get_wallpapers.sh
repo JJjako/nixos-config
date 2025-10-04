@@ -1,1 +1,1 @@
-kitty -e git clone https://github.com/JJjako/minimalist-wallpapers.git
+kitty -d ~/Pictures/wallpapers -e git clone https://github.com/JJjako/minimalist-wallpapers.git

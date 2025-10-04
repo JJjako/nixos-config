@@ -10,7 +10,6 @@
       cd = "z";
       tt = "gtrash put";
       cat = "bat";
-      code = "codium";
       diff = "delta --diff-so-fancy --side-by-side";
       less = "bat";
       f = "superfile";
