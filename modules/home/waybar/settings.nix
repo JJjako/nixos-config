@@ -98,7 +98,7 @@ in
       # path = "/";
       format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
       interval = 60;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty duf'";
+      on-click-right = "hyprctl dispatch exec 'kitty -e ./nixos-config/modules/home/scripts/scripts/kitty_duf.sh'";
     };
     network = {
       format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
