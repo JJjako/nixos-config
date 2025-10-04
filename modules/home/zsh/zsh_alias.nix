@@ -3,6 +3,7 @@
   programs.zsh = {
     shellAliases = {
       # Utils
+      ping = "gping";
       sn = "subl";
       c = "clear";
       cd = "z";
@@ -25,8 +26,7 @@
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
 
-      # Nixos
-      cdnix = "cd ~/nixos-config && codium ~/nixos-config";
+      
       ns = "nom-shell --run zsh";
       nd = "nom develop --command zsh";
       nb = "nom build";
