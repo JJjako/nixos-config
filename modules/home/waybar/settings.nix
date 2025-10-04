@@ -98,7 +98,7 @@ in
       # path = "/";
       format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
       interval = 60;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty duf'";
     };
     network = {
       format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
