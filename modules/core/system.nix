@@ -28,6 +28,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    p3x-onenote
     flatpak
     timer
     haskellPackages.timers
