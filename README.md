@@ -84,7 +84,7 @@ Catppuccin (EXPAND)
 | **Notification Daemon**     | [swaync][swaync] |
 | **Terminal Emulator**       | [Ghostty][Ghostty] |
 | **Shell**                   | [zsh][zsh] + [powerlevel10k][powerlevel10k] |
-| **Text Editor**             | [VSCodium][VSCodium] + [Neovim][Neovim] |
+| **Text Editor**             | [Sublime Text|
 | **network management tool** | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
 | **System resource monitor** | [Btop][Btop] |
 | **File Manager**            | [nemo][nemo] + [yazi][yazi] |
@@ -100,7 +100,6 @@ Catppuccin (EXPAND)
 | **Screenshot Software**     | [grimblast][grimblast] |
 | **Screen Recording**        | [wf-recorder][wf-recorder] + [OBS][OBS] |
 | **Clipboard**               | [wl-clip-persist][wl-clip-persist] |
-| **Color Picker**            | [hyprpicker][hyprpicker] |
 
 
 ## 📝 Shell aliases
@@ -116,7 +115,6 @@ Utils (EXPAND)
 - ```vim```   $\rightarrow$ ```nvim```
 - ```cat```   $\rightarrow$ ```bat```
 - ```nano```  $\rightarrow$ ```micro```
-- ```code```  $\rightarrow$ ```codium```
 - ```diff```  $\rightarrow$ ```delta --diff-so-fancy --side-by-side```
 - ```less```  $\rightarrow$ ```bat```
 - ```y```     $\rightarrow$ ```yazi```
@@ -127,7 +125,6 @@ Utils (EXPAND)
 - ```pdf```   $\rightarrow$ ```tdf```
 - ```open```  $\rightarrow$ ```xdg-open```
 - ```space``` $\rightarrow$ ```ncdu```
-- ```man```   $\rightarrow$ ```BAT_THEME='default' batman```
 - ```l```     $\rightarrow$ ```eza --icons  -a --group-directories-first -1```
 - ```ll```    $\rightarrow$ ```eza --icons  -a --group-directories-first -1 --no-user --long```
 - ```tree```  $\rightarrow$ ```eza --icons --tree --group-directories-first```
@@ -137,8 +134,6 @@ Utils (EXPAND)
 <summary>
 Nixos (EXPAND)
 </summary>
-
-- ```cdnix```      $\rightarrow$ ```cd ~/nixos-config && codium ~/nixos-config```
 - ```ns```         $\rightarrow$ ```nom-shell --run zsh```
 - ```nix-test```   $\rightarrow$ ```nh os test```
 - ```nix-switch``` $\rightarrow$ ```nh os switch```
