@@ -12,7 +12,7 @@ case "$HOST" in
     ;;
 esac
 
-echo "🔧 Rebuilding NixOS for: $TARGET"
+echo "Rebuilding NixOS for: $TARGET"
 if sudo nixos-rebuild switch --flake .#"$TARGET"; then
     echo "Rebuild successful"
 else
