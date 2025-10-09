@@ -1,90 +1,68 @@
 #!/usr/bin/env bash
-set -e
-# Detect hostname → use correct flake target
-HOST=$(hostname)
-if [[ $HOST == "desktop" ]]; then
-    TARGET="desktop"
-elif [[ $HOST == "laptop" ]]; then
-    TARGET="laptop"
-else
-    echo "⚠️ Unknown host: $HOST"
-    echo "Defaulting to 'desktop'"
-    TARGET="desktop"
-fi
+set -euo pipefail
 
-echo "Rebuilding NixOS system for $TARGET..."
-if sudo nixos-rebuild switch --flake .#$TARGET; then
-    echo "Rebuild system ($TARGET) ... Done"
+# --- Detect target system ---
+HOST=$(hostname)
+case "$HOST" in
+  desktop) TARGET="desktop" ;;
+  laptop) TARGET="laptop" ;;
+  *) 
+    echo "⚠️ Unknown host: $HOST → defaulting to 'desktop'"
+    TARGET="desktop"
+    ;;
+esac
+
+echo "🔧 Rebuilding NixOS for: $TARGET..."
+if sudo nixos-rebuild switch --flake .#"$TARGET"; then
+    echo "Rebuild successful"
 else
-    echo "Rebuild system ($TARGET) ... FAILED"
+    echo "❌ Rebuild failed"
     exit 1
 fi
 
-echo "Reloading Hyprland config..."
-if hyprctl reload; then
-    echo "Reloading Hyprland config ... ok"
+# --- Reload Hyprland (if running) ---
+if pgrep -x hyprland >/dev/null; then
+    hyprctl reload && echo "Hyprland reloaded"
 else
-    echo "Could not reload Hyprland (is it running?)"
+    echo "⚠️ Hyprland not running — skipping reload"
 fi
-echo -e "\nUpdate complete."
-notify-send "Update complete"
-echo "Press [Enter] to exit, [r] to commit config, [x] to quit without commit."
 
-echo ""
+notify-send "NixOS rebuild" "System update complete for $TARGET"
 
-if true; then
-    cd ~/nixos-config || exit 1
-    git add .
-    git commit -m "Update NixOS config ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')"
-    git push
-    REPO_PATH="$HOME/nixos-config"
+# --- Ask user what to do next ---
+echo
+read -rp "Commit and push changes? [y/N] " choice
+[[ "${choice,,}" == "y" ]] || { echo "🚪 Exiting without commit."; exit 0; }
 
-# Make sure it's a Git repository
-    if [ ! -d "$REPO_PATH/.git" ]; then
-        echo "Error: $REPO_PATH is not a Git repository."
-        exit 1
+# --- Function for repo sync ---
+sync_repo() {
+    local repo_path=$1
+    local label=$2
+
+    echo "Syncing $label ($repo_path)..."
+    cd "$repo_path" || { echo "❌ Can't cd into $repo_path"; return 1; }
+
+    if [ ! -d .git ]; then
+        echo "❌ $repo_path is not a Git repository."
+        return 1
     fi
 
-# Go to the repository
-    cd "$REPO_PATH" || exit 1
-
-# Fetch and pull latest changes
-    git fetch --all
-    git pull --rebase
-    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    LATEST_COMMIT=$(git log -1 --pretty=format:"%h - %s")
-    notify-send "Git Update" "Branch: $CURRENT_BRANCH\nLatest: $LATEST_COMMIT"
-# Optional: notify or print status
-    git status
-    echo "✅ Changes committed."
-if true; then    
-    cd ~/shared || exit 1
     git add .
-    git commit -m "Update NixOS config ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')"
+    git commit -m "Update $label ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')" || true
     git push
-    REPO_PATH="$HOME/shared"
-
-    # Make sure it's a Git repository
-    if [ ! -d "$REPO_PATH/.git" ]; then
-        echo "Error: $REPO_PATH is not a Git repository."
-        exit 1
-    fi
-
-    # Go to the repository
-    cd "$REPO_PATH" || exit 1
-
-    # Fetch and pull latest changes
     git fetch --all
     git pull --rebase
-    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    LATEST_COMMIT=$(git log -1 --pretty=format:"%h - %s")
-    notify-send "Git Update" "Branch: $CURRENT_BRANCH\nLatest: $LATEST_COMMIT"
-    # Optional: notify or print status
-    git status
-    echo "✅ Changes committed."
-   
-elif [[ $choice == "x" ]]; then
-    echo "❌ Exiting without commit."
-else
-    echo "Exiting."
-fi
+
+    local branch latest
+    branch=$(git rev-parse --abbrev-ref HEAD)
+    latest=$(git log -1 --pretty=format:"%h - %s")
+    notify-send "Git: $label" "Branch: $branch\nLatest: $latest"
+    echo "✅ $label synced."
+}
+
+# --- Sync both repos ---
+sync_repo "$HOME/nixos-config" "NixOS config"
+sync_repo "$HOME/shared" "Shared directory"
+
+echo
+echo "Update + push complete!"
