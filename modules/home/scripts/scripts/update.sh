@@ -12,11 +12,12 @@ case "$HOST" in
     ;;
 esac
 
-echo "🔧 Rebuilding NixOS for: $TARGET..."
+echo "🔧 Rebuilding NixOS for: $TARGET"
 if sudo nixos-rebuild switch --flake .#"$TARGET"; then
     echo "Rebuild successful"
 else
     echo "❌ Rebuild failed"
+    read
     exit 1
 fi
 
@@ -31,8 +32,7 @@ notify-send "NixOS rebuild" "System update complete for $TARGET"
 
 # --- Ask user what to do next ---
 echo
-read -rp "Commit and push changes? [y/N] " choice
-[[ "${choice,,}" == "y" ]] || { echo "🚪 Exiting without commit."; exit 0; }
+
 
 # --- Function for repo sync ---
 sync_repo() {
