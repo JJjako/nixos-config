@@ -57,6 +57,30 @@ if true; then
 # Optional: notify or print status
     git status
     echo "✅ Changes committed."
+        cd ~/nixos-config || exit 1
+        git add .
+        git commit -m "Update NixOS config ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
+        REPO_PATH="$HOME/shared"
+
+    # Make sure it's a Git repository
+        if [ ! -d "$REPO_PATH/.git" ]; then
+            echo "Error: $REPO_PATH is not a Git repository."
+            exit 1
+        fi
+
+    # Go to the repository
+        cd "$REPO_PATH" || exit 1
+
+    # Fetch and pull latest changes
+        git fetch --all
+        git pull --rebase
+        CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        LATEST_COMMIT=$(git log -1 --pretty=format:"%h - %s")
+        notify-send "Git Update" "Branch: $CURRENT_BRANCH\nLatest: $LATEST_COMMIT"
+    # Optional: notify or print status
+        git status
+        echo "✅ Changes committed."
    
 elif [[ $choice == "x" ]]; then
     echo "❌ Exiting without commit."

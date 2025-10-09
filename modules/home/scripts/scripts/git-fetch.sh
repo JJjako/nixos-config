@@ -1,4 +1,4 @@
-REPO_PATH="$HOME/nixos-config"
+REPO_PATH="$HOME/shared"
 
 # Check if it's a Git repository
 # Move to the repo
