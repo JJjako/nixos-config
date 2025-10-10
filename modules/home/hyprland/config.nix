@@ -303,7 +303,7 @@ in
         "workspace 5, class:^(Spotify)$"
         "workspace 8, class:^(com.obsproject.Studio)$"
         "workspace 10, class:^(discord)$"
-        "workspace 10, class:^(electron)$"
+        "workspace 10, class:^(vesktop)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
         "float,class:^(org.gnome.Calculator)$"
