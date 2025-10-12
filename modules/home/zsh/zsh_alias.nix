@@ -25,7 +25,7 @@
       l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
-
+      calc = "pcalc";
       
       #ns = "nom-shell --run zsh";
       #nd = "nom develop --command zsh";
