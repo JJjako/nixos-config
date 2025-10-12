@@ -10,4 +10,7 @@ in
     grub.enable = true;
     grub.device = "/dev/sda";
   };
+
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.supportedFilesystems = [ "vfat" "ext4" ];
 }
