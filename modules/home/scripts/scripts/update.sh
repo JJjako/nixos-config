@@ -1,68 +1,61 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -e
 
-# --- Detect target system ---
-HOST=$(hostname)
-case "$HOST" in
-  desktop) TARGET="desktop" ;;
-  laptop) TARGET="laptop" ;;
-  *) 
-    echo "⚠️ Unknown host: $HOST → defaulting to 'desktop'"
-    TARGET="desktop"
-    ;;
-esac
+REPO_PATH="$HOME/nixos-config"
 
-echo "Rebuilding NixOS for: $TARGET"
-if sudo nixos-rebuild switch --flake .#"$TARGET"; then
-    echo "Rebuild successful"
-else
-    echo "❌ Rebuild failed"
-    read
+# Go to repo
+cd "$REPO_PATH" || { echo "❌ Repo not found at $REPO_PATH"; exit 1; }
+
+# Ensure it's a Git repo
+if [ ! -d ".git" ]; then
+    echo "❌ $REPO_PATH is not a Git repository."
     exit 1
 fi
 
-# --- Reload Hyprland (if running) ---
-if pgrep -x hyprland >/dev/null; then
-    hyprctl reload && echo "Hyprland reloaded"
+# Fetch and pull latest changes before rebuild
+echo "📥 Pulling latest changes..."
+git fetch --all
+git pull --rebase
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+LATEST_COMMIT=$(git log -1 --pretty=format:"%h - %s")
+notify-send "Git Update" "Pulled latest from $CURRENT_BRANCH\n$LATEST_COMMIT"
+echo "✅ Repository is up to date."
+
+# Detect hostname → use correct flake target
+HOST=$(hostname)
+if [[ $HOST == "desktop" ]]; then
+    TARGET="desktop"
+elif [[ $HOST == "laptop" ]]; then
+    TARGET="laptop"
 else
-    echo "⚠️ Hyprland not running — skipping reload"
+    echo "⚠️ Unknown host: $HOST"
+    echo "Defaulting to 'desktop'"
+    TARGET="desktop"
 fi
 
-notify-send "NixOS rebuild" "System update complete for $TARGET"
+# Rebuild
+echo "🔧 Rebuilding NixOS system for $TARGET..."
+if sudo nixos-rebuild switch --flake .#$TARGET; then
+    echo "✅ Rebuild system ($TARGET) ... Done"
+else
+    echo "❌ Rebuild system ($TARGET) ... FAILED"
+    exit 1
+fi
 
-# --- Ask user what to do next ---
-echo
+# Reload Hyprland if running
+echo "🔄 Reloading Hyprland config..."
+if hyprctl reload 2>/dev/null; then
+    echo "✅ Hyprland reloaded"
+else
+    echo "⚠️ Could not reload Hyprland (is it running?)"
+fi
 
+# Commit and push local changes
+echo "💾 Committing and pushing changes..."
+git add .
+git commit -m "Update NixOS config ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️ Nothing to commit."
+git push
+echo "✅ Changes pushed."
 
-# --- Function for repo sync ---
-sync_repo() {
-    local repo_path=$1
-    local label=$2
-
-    echo "Syncing $label ($repo_path)..."
-    cd "$repo_path" || { echo "❌ Can't cd into $repo_path"; return 1; }
-
-    if [ ! -d .git ]; then
-        echo "❌ $repo_path is not a Git repository."
-        return 1
-    fi
-
-    git add .
-    git commit -m "Update $label ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')" || true
-    git push
-    git fetch --all
-    git pull --rebase
-
-    local branch latest
-    branch=$(git rev-parse --abbrev-ref HEAD)
-    latest=$(git log -1 --pretty=format:"%h - %s")
-    notify-send "Git: $label" "Branch: $branch\nLatest: $latest"
-    echo "✅ $label synced."
-}
-
-# --- Sync both repos ---
-sync_repo "$HOME/nixos-config" "NixOS config"
-sync_repo "$HOME/shared" "Shared directory"
-
-echo
-echo "Update + push complete!"
+notify-send "Update complete" "Host: $TARGET"
+echo -e "\n🎉 Update complete."
