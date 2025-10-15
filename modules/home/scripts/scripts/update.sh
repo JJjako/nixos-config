@@ -13,6 +13,7 @@ if [ ! -d ".git" ]; then
 fi
 
 # Fetch and pull latest changes before rebuild
+git add .
 git commit -m "Update NixOS config ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️ Nothing to commit."
 
 echo "📥 Pulling latest changes..."
@@ -55,7 +56,8 @@ fi
 
 # Commit and push local changes
 echo "💾 Committing and pushing changes..."
-git add .
+
+
 git push
 echo "✅ Changes pushed."
 
