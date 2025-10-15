@@ -13,8 +13,10 @@ if [ ! -d ".git" ]; then
 fi
 
 # Fetch and pull latest changes before rebuild
+git commit -a "Committing"
 echo "📥 Pulling latest changes..."
 git fetch --all
+
 git pull --rebase
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 LATEST_COMMIT=$(git log -1 --pretty=format:"%h - %s")

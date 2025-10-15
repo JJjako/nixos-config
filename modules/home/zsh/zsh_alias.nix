@@ -3,7 +3,7 @@
   programs.zsh = {
     shellAliases = {
       # Utils
-      pi = "ssh jw@192.168.178.140"
+      pi = "ssh jw@192.168.178.140";
       ping = "gping";
       sn = "subl";
       u = "update";
