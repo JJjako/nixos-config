@@ -28,6 +28,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    ngrok
     cameractrls
     p3x-onenote
     flatpak
