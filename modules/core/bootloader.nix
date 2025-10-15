@@ -1,16 +1,8 @@
-{ config, pkgs, ... }:
-let
-  efi = builtins.pathExists "/sys/firmware/efi";
-in
-{
-  boot.loader = if efi then {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  } else {
-    grub.enable = true;
-    grub.device = "/dev/sda";
-  };
+{ pkgs, ... }:
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.supportedFilesystems = [ "vfat" "ext4" ];
+{
+  boot.loader.grub.enable = false;
+  boot.loader.grub.device = "/dev/sda"; # only relevant if grub.enable = true
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 }
