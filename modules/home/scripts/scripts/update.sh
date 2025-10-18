@@ -15,7 +15,7 @@ fi
 # Fetch and pull latest changes before rebuild
 git add .
 git commit -m "Update NixOS config ($TARGET) on $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️ Nothing to commit."
-
+git push
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 LATEST_COMMIT=$(git log -1 --pretty=format:"%h - %s")
@@ -58,7 +58,7 @@ git fetch --all
 
 git pull --rebase
 
-git push
+
 echo "✅ Changes pushed."
 
 notify-send "Update complete" "Host: $TARGET"
