@@ -1,19 +1,16 @@
 { lib, pkgs, ... }:
 
 {
-  # Automatically choose the correct bootloader based on firmware type
-  boot.loader = if builtins.pathExists "/sys/firmware/efi" then {
-    # ✅ EFI systems (e.g. your desktop)
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    grub.enable = false;
-  } else {
-    # 💻 Legacy BIOS systems (e.g. your laptop)
-    grub.enable = true;
-    grub.device = "/dev/sda";
-  };
+  # Automatic bootloader selection
+  boot.loader = {
+    timeout = 3;
+    systemd-boot.editor = false;
 
-  # Recommended safety defaults
-  boot.loader.timeout = 3;
-  boot.loader.systemd-boot.editor = false;
+    # Conditional enable flags
+    systemd-boot.enable = lib.mkIf (builtins.pathExists "/sys/firmware/efi") true;
+    efi.canTouchEfiVariables = lib.mkIf (builtins.pathExists "/sys/firmware/efi") true;
+
+    grub.enable = lib.mkIf (!(builtins.pathExists "/sys/firmware/efi")) true;
+    grub.device = lib.mkIf (!(builtins.pathExists "/sys/firmware/efi")) "/dev/sda";
+  };
 }
