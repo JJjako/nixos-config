@@ -62,9 +62,6 @@
     blueman
    
   ]; 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-             "ngrok"
-           ];
 nixpkgs.config.allowUnsupportedSystem = true;  
 nixpkgs.config.permittedInsecurePackages = [
                 "openssl-1.1.1w"
