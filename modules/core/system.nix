@@ -28,6 +28,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    texstudio
     texmaker
     cameractrls
     p3x-onenote
