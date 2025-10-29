@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MENU_FILE="search.tsv"
+
+# Check menu exists
+[ -s "$MENU_FILE" ] || { notify-send "Rofi menu" "No items in $MENU_FILE"; exit 1; }
+
+# Show menu
+choice="$(awk -F'\t' 'NF>=2{print $1}' "$MENU_FILE" \
+  | rofi -dmenu -i -p '  actions')"
+
+[ -z "${choice:-}" ] && exit 0
+
+# Get the command
+cmd="$(awk -F'\t' -v c="$choice" '$1==c{ $1=""; sub(/^\t/, ""); print; exit }' "$MENU_FILE")"
+
+[ -z "${cmd:-}" ] && { notify-send "Rofi menu" "No command for \"$choice\""; exit 1; }
+
+# Run it in background
+eval "$cmd" &

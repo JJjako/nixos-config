@@ -1,6 +1,3 @@
-Config	(cd ~/nixos-config/rofi && ./config)
-Config-search	(cd ~/nixos-config/rofi && ./filesearch.sh)
-Content-search	kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./contentsearch.sh
-Nix-search	kitty -d ~/nixos-config/modules/home/nix-search -e ./nix-search.sh
-Term	(cd ~/nixos-config/rofi && ./term-rofi.sh)
+Windows-VM	(cd ~/VM && quickemu --vm windows-10.conf)
+Search	(cd ~/nixos-config/rofi && ./search)
 Update	hyprctl dispatch exec "[workspace 8 silent] kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./update.sh"
