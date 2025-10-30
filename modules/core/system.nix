@@ -25,6 +25,8 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl.enable = true;
   hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.open = true;  # ✅ Use the new open-source NVIDIA kernel module
+
 
   nixpkgs = {
     overlays = [ inputs.nur.overlays.default ];
