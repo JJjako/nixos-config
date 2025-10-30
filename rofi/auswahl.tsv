@@ -1,3 +1,4 @@
 Windows-VM	(cd ~/VM && quickemu --vm windows-10.conf)
 Search	(cd ~/nixos-config/rofi && ./search)
+Rofi	kitty -e add-rofi
 Update	hyprctl dispatch exec "[workspace 8 silent] kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./update.sh"

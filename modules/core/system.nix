@@ -22,12 +22,17 @@
       ];
     };
   };
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.opengl.enable = true;
+  hardware.nvidia.modesetting.enable = true;
+
   nixpkgs = {
     overlays = [ inputs.nur.overlays.default ];
   };
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    prismlauncher
     quickemu
     texliveFull
     texstudio
