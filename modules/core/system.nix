@@ -81,4 +81,17 @@ nixpkgs.config.permittedInsecurePackages = [
   i18n.defaultLocale = "de_DE.UTF-8";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";
+  services.polkit.enable = true;
+
+# Erlaube Benutzern in Gruppe wheel, Laufwerke zu mounten und zu formatieren
+security.polkit.rules = ''
+  polkit.addRule(function(action, subject) {
+      if ((action.id == "org.freedesktop.udisks2.filesystem-mount" ||
+           action.id == "org.freedesktop.udisks2.filesystem-unmount-others" ||
+           action.id == "org.freedesktop.udisks2.format" ||
+           action.id == "org.freedesktop.udisks2.eject-media") &&
+          subject.isInGroup("wheel")) {
+          return polkit.Result.YES;
+      }
+  });
 }
