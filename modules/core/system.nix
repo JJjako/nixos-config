@@ -67,7 +67,7 @@
     drawio
     firefox
     rustup
-    whatsie
+    wasistlos
     wget
     git
     blueman
