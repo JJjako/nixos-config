@@ -57,6 +57,7 @@
     sublime4
     steamcmd
     steam
+    pdf4qt
     rustlings
     google-chrome
     netflix

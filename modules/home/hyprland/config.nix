@@ -26,8 +26,7 @@ in
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
         "[workspace 1 silent] ${browser}"
         "[workspace 2 silent] ${terminal}"
-  	"[workspace 9 silent] whatsie"
-	  "[workspace 0 silent] vesktop"
+  		  "[workspace 0 silent] vesktop"
       ];
 
       input = {
