@@ -37,7 +37,6 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
-    pycharm-communityycharm-community
     pycharm-community
     docker
     prismlauncher
