@@ -29,7 +29,7 @@
       calc = "pcalc";
       
       #ns = "nom-shell --run zsh";
-      #nd = "nom develop --command zsh";
+      nd = "nom develop --command zsh";
       #nb = "nom build";
       #nc = "nh clean all --keep 5";
       #nft = "nh os test";
