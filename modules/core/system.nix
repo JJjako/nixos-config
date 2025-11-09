@@ -34,6 +34,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    docker
     prismlauncher
     quickemu
     texliveFull
