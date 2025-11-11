@@ -37,6 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    ventoy
     jetbrains.pycharm-community
     docker
     prismlauncher
