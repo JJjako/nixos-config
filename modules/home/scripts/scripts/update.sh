@@ -2,8 +2,7 @@
 set -e
 
 REPO_PATH="$HOME/nixos-config"
-export NIXPKGS_ALLOW_UNFREE=1
-export NIXPKGS_ALLOW_INSECURE=1
+
 # Go to repo
 cd "$REPO_PATH" || { echo "❌ Repo not found at $REPO_PATH"; exit 1; }
 
@@ -34,7 +33,8 @@ else
     echo "Defaulting to 'desktop'"
     TARGET="desktop"
 fi
-
+export NIXPKGS_ALLOW_UNFREE=1
+export NIXPKGS_ALLOW_INSECURE=1
 # Rebuild
 echo "🔧 Rebuilding NixOS system for $TARGET..."
 if sudo nixos-rebuild switch --flake .#$TARGET; then
