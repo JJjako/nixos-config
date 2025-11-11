@@ -22,8 +22,7 @@ in
         "swww-daemon &"
         "git-fetch"
         "hyprlock"
-        "export NIXPKGS_ALLOW_UNFREE=1"
-        "export NIXPKGS_ALLOW_INSECURE=1"
+
 
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
         "[workspace 1 silent] ${browser}"

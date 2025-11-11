@@ -2,7 +2,8 @@
 set -e
 
 REPO_PATH="$HOME/nixos-config"
-
+export NIXPKGS_ALLOW_UNFREE=1
+export NIXPKGS_ALLOW_INSECURE=1
 # Go to repo
 cd "$REPO_PATH" || { echo "❌ Repo not found at $REPO_PATH"; exit 1; }
 
