@@ -30,7 +30,9 @@
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.open = true;  # ✅ Use the new open-source NVIDIA kernel module
 
-
+  nixpkgs.config.permittedInsecurePackages = [
+                  "ventoy-1.1.05"
+                ];
   nixpkgs = {
     overlays = [ inputs.nur.overlays.default ];
   };
