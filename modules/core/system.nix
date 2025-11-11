@@ -30,9 +30,7 @@
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.open = true;  # ✅ Use the new open-source NVIDIA kernel module
 
-  nixpkgs.config.permittedInsecurePackages = [
-                  "ventoy-1.1.05"
-                ];
+
   nixpkgs = {
     overlays = [ inputs.nur.overlays.default ];
   };
@@ -85,6 +83,8 @@
 nixpkgs.config.allowUnsupportedSystem = true;  
 nixpkgs.config.permittedInsecurePackages = [
                 "openssl-1.1.1w"
+              
+                "ventoy-1.1.05"
               ];
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "de_DE.UTF-8";
