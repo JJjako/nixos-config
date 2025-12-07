@@ -37,6 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    xclip
     emojipick
     vscode
     jetbrains.pycharm-community
