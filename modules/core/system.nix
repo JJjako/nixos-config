@@ -37,8 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
-    xclip
-    emojipick
+    rofi-emoji
     vscode
     jetbrains.pycharm-community
     docker
