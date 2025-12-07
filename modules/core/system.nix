@@ -37,7 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
-    ventoy
+    vscode
     jetbrains.pycharm-community
     docker
     prismlauncher
@@ -83,7 +83,6 @@
 nixpkgs.config.allowUnsupportedSystem = true;  
 nixpkgs.config.permittedInsecurePackages = [
                 "openssl-1.1.1w"
-                "ventoy-1.1.05"
               ];
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "de_DE.UTF-8";
