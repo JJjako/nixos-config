@@ -37,6 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    geogebra
     rofi-emoji
     vscode
     jetbrains.pycharm-community
