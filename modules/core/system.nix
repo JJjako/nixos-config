@@ -81,6 +81,7 @@
     git
     blueman
     kdePackages.dolphin
+    bash
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
