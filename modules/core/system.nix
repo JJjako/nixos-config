@@ -80,7 +80,7 @@
     wget
     git
     blueman
-    dolphin
+    kdePackages.dolphin
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
