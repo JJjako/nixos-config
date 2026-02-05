@@ -80,6 +80,7 @@
     wget
     git
     blueman
+    dolphin
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
