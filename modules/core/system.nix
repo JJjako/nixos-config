@@ -82,6 +82,7 @@
     blueman
     kdePackages.dolphin
     bash
+    neovim
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
