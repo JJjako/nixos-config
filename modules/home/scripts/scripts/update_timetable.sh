@@ -1,0 +1,1 @@
+kitty -d ~/shared/untis-google-calendar-sync -e "nix-shell"
