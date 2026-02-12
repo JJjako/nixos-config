@@ -25,7 +25,7 @@ in
 
 
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
-        "update_timetable"
+        "[silent workspace 0]update_timetable"
       ];
 
       input = {
