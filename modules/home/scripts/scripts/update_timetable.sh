@@ -1,1 +1,2 @@
-kitty -d ~/shared/untis-google-calendar-sync -e "nix-shell"
+result=$(kitty -d ~/shared/untis-google-calendar-sync -e "nix-shell")
+notify-send "$result"
