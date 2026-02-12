@@ -25,6 +25,7 @@ in
 
 
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
+  		  "[workspace 0 silent] kitty -d ~/shared/untis-google-calendar-sync -e "nix-shell"
       ];
 
       input = {
