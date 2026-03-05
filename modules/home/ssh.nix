@@ -16,9 +16,9 @@
         identitiesOnly = true;
       };
       robotpi = {
-        host = "robotpi";
+        host = "wro";
         hostname = "raspberrypi.local";
-        user = "jakob";
+        user = "wro";
         identityFile = "~/.ssh/id_robotpi";
         identitiesOnly = true;
       };
