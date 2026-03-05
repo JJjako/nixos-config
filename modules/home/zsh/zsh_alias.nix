@@ -3,7 +3,7 @@
   programs.zsh = {
     shellAliases = {
       # Utils
-      picon = "ssh wro@192.168.178.194";
+      picon = "ssh -i /home/jw/.ssh/id_robotpi 'wro@192.168.178.194'";
       ping = "gping";
       sn = "subl";
       u = "update";
