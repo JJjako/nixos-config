@@ -15,9 +15,9 @@
         identityFile = "~/.ssh/id_github";
         identitiesOnly = true;
       };
-      robotpi = {
+      JAP = {
         host = "JAP";
-        hostname = "JAP";
+        hostname = "192.168.178.194";
         user = "wro";
         identityFile = "~/.ssh/id_robotpi";
         identitiesOnly = true;
