@@ -83,6 +83,7 @@
     kdePackages.dolphin
     bash
     neovim
+    emacsPackages.org-onenote
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
