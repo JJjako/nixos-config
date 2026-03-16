@@ -37,7 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
-    geogebra
+    geogebra6
     rofi-emoji
     vscode
     jetbrains.pycharm-community
@@ -83,7 +83,6 @@
     kdePackages.dolphin
     bash
     neovim
-    emacsPackages.org-onenote
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
