@@ -38,7 +38,7 @@
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
     fontconfig.dev
-    freetype
+    freetype.dev
     pkg-config
     geogebra6
     rofi-emoji
@@ -108,5 +108,7 @@ environment.etc."polkit-1/rules.d/50-udisks.rules".text = ''
   });
 '';
 
-
+environment.sessionVariables = {
+  PKG_CONFIG_PATH = "${pkgs.fontconfig.dev}/lib/pkgconfig:${pkgs.freetype.dev}/lib/pkgconfig";
+};
 }
