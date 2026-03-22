@@ -37,7 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
-    fontconfig
+    fontconfig.dev
     freetype
     pkg-config
     geogebra6
