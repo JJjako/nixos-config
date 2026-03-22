@@ -37,6 +37,7 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    pkg-config
     geogebra6
     rofi-emoji
     vscode
