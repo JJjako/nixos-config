@@ -14,21 +14,21 @@
     tldr
 
     ## Tools / useful cli
-    aoc-cli                           # Advent of Code command-line tool
-    asciinema
-    asciinema-agg
+  #  aoc-cli                           # Advent of Code command-line tool
+   # asciinema
+   # asciinema-agg
     binsider
     bitwise                           # cli tool for bit / hex manipulation
     broot                             # tree files view
-    caligula                          # User-friendly, lightweight TUI for disk imaging
+   #caligula                          # User-friendly, lightweight TUI for disk imaging
     hyperfine                         # benchmarking tool
     pastel                            # cli to manipulate colors
-    swappy                            # snapshot editing tool
+  #  swappy                            # snapshot editing tool
     tdf                               # cli pdf viewer
     tokei                             # project line counter
     translate-shell                   # cli translator
     woomer
-    yt-dlp-light
+    #yt-dlp-light
 
     ## TUI
     # epy                               # ebook reader
@@ -37,7 +37,6 @@
     smassh                            # typing test in the terminal
     toipe                             # typing test in the terminal
     tomato-c                          # TUI pomodoro timer
-    ttyper                            # cli typing test
 
     ## Monitoring / fetch
     htop
