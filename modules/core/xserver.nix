@@ -3,9 +3,11 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "us,fr";
+      xkb = {
+        layout = "us,de";
+        options = "grp:alt_shift_toggle";
+      };
     };
-
     displayManager.autoLogin = {
       enable = true;
       user = "${username}";
@@ -14,6 +16,5 @@
       enable = true;
     };
   };
-  # To prevent getting stuck at shutdown
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 }
