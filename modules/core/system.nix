@@ -94,6 +94,7 @@ nixpkgs.config.permittedInsecurePackages = [
               ];
   time.timeZone = "Europe/Paris";
   i18n.defaultLocale = "de_DE.UTF-8";
+
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";
 environment.etc."polkit-1/rules.d/50-udisks.rules".text = ''
