@@ -4,8 +4,8 @@
     xserver = {
       enable = true;
       xkb = {
-        layout = "us,de";
-        options = "grp:alt_shift_toggle";
+        layout = "de";
+        #options = "grp:alt_shift_toggle";
       };
     };
     displayManager.autoLogin = {
