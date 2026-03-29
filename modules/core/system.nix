@@ -63,6 +63,7 @@
     wtype
     virtualbox    
     appimage-run
+    qlcplus
     gcc
     wdisplays
     sublime4
