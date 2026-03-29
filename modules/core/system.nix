@@ -37,6 +37,9 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
+    alsa-lib
+    pipewire
+    fftw
     fontconfig.dev
     freetype.dev
     pkg-config
@@ -63,7 +66,6 @@
     wtype
     virtualbox    
     appimage-run
-    qlcplus
     mesa 
     gcc
     wdisplays
