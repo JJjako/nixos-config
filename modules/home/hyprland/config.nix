@@ -247,13 +247,13 @@ in
       ];
 
       # # binds active in lockscreen
-       bindl = [
-           laptop brigthness
-         ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
-         ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-         "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
-         "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
-       ];
+      # bindl = [
+      #    laptop brigthness
+      #  ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+      # ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+      #  "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
+      #  "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
+      #];
 
       # # binds that repeat when held
       # binde = [
