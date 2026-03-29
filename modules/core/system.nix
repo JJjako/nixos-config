@@ -72,7 +72,6 @@
     rustlings
     google-chrome
     netflix
-    qlcplus
     spotify
     myfitnesspal
     elmPackages.nodejs
