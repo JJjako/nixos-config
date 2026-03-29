@@ -37,34 +37,24 @@
   environment.variables = {
      USED_EDITOR = "subl";};
   environment.systemPackages = with pkgs; [
-    alsa-lib
-    pipewire
-    fftw
     fontconfig.dev
     freetype.dev
     pkg-config
     geogebra6
     rofi-emoji
     vscode
-    jetbrains.pycharm-community
     docker
-    prismlauncher
-    quickemu
     texliveFull
     texstudio
     texmaker
-    cameractrls
+   # cameractrls
     p3x-onenote
     flatpak
     timer
     haskellPackages.timers
-    python3
-    python3Packages.jupyterlab
-    python3Packages.networkx
-    python3Packages.matplotlib
+   
     teams-for-linux
-    wtype
-    virtualbox    
+   # wtype  
     appimage-run
     mesa 
     gcc
@@ -74,10 +64,9 @@
     steam
     pdf4qt
     rustlings
-    google-chrome
-    netflix
+    #google-chrome
+    #netflix
     spotify
-    myfitnesspal
     elmPackages.nodejs
     drawio
     firefox
@@ -88,7 +77,6 @@
     blueman
     kdePackages.dolphin
     bash
-    neovim
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
