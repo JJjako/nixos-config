@@ -64,6 +64,7 @@
     virtualbox    
     appimage-run
     qlcplus
+    mesa 
     gcc
     wdisplays
     sublime4
