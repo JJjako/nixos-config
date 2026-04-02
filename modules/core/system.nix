@@ -77,6 +77,7 @@
     blueman
     kdePackages.dolphin
     bash
+    pstree
    
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
