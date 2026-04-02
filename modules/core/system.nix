@@ -78,7 +78,7 @@
     kdePackages.dolphin
     bash
     pstree
-   
+    midivisualizer
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
 nixpkgs.config.permittedInsecurePackages = [
