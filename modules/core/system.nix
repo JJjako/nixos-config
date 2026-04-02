@@ -79,6 +79,7 @@
     bash
     pstree
     midivisualizer
+    show-midi
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
 nixpkgs.config.permittedInsecurePackages = [
