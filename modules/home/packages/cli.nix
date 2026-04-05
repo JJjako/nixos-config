@@ -40,7 +40,7 @@
 
     ## Monitoring / fetch
     htop
-    neofetch
+    fastfetch
     nitch                             # systhem fetch util
     onefetch                          # fetch utility for git repo
     wavemon                           # monitoring for wireless network devices
