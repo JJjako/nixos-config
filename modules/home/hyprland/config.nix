@@ -29,7 +29,7 @@ in
       ];
 
       input = {
-        kb_layout = "us";
+        kb_layout = "de";
         #kb_options = "grp:alt_caps_toggle";
         numlock_by_default = true;
 	        repeat_delay = 300;
@@ -248,12 +248,12 @@ in
 
       # # binds active in lockscreen
       # bindl = [
-      #   # laptop brigthness
-      #   ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
-      #   ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-      #   "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
-      #   "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
-      # ];
+      #    laptop brigthness
+      #  ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+      # ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+      #  "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
+      #  "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
+      #];
 
       # # binds that repeat when held
       # binde = [

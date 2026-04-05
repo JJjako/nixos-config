@@ -38,6 +38,7 @@
     ./waybar                          # status bar
     ./waypaper.nix                    # GUI wallpaper picker
     ./xdg-mimes.nix                   # xdg config
+    ./custom/default.nix
     ./zsh                             # shell
   ];
 }

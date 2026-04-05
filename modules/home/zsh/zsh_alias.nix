@@ -3,6 +3,7 @@
   programs.zsh = {
     shellAliases = {
       # Utils
+      disktree = "ncdu";
       picon = "ssh -i /home/jw/.ssh/id_robotpi 'wro@192.168.178.194'";
       ping = "gping";
       sn = "subl";

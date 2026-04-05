@@ -26,7 +26,7 @@
     };
   };
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.open = true;  # ✅ Use the new open-source NVIDIA kernel module
 
@@ -43,26 +43,20 @@
     geogebra6
     rofi-emoji
     vscode
-    jetbrains.pycharm-community
     docker
-    prismlauncher
-    quickemu
     texliveFull
     texstudio
     texmaker
-    cameractrls
+   # cameractrls
     p3x-onenote
     flatpak
     timer
     haskellPackages.timers
-    python3
-    python3Packages.jupyterlab
-    python3Packages.networkx
-    python3Packages.matplotlib
+   
     teams-for-linux
-    wtype
-    virtualbox    
+   # wtype  
     appimage-run
+    mesa 
     gcc
     wdisplays
     sublime4
@@ -70,11 +64,9 @@
     steam
     pdf4qt
     rustlings
-    google-chrome
-    netflix
-    qlcplus
+    #google-chrome
+    #netflix
     spotify
-    myfitnesspal
     elmPackages.nodejs
     drawio
     firefox
@@ -85,15 +77,17 @@
     blueman
     kdePackages.dolphin
     bash
-    neovim
-   
+    pstree
+    midivisualizer
+    show-midi
   ]; 
 nixpkgs.config.allowUnsupportedSystem = true;  
 nixpkgs.config.permittedInsecurePackages = [
                 "openssl-1.1.1w"
               ];
   time.timeZone = "Europe/Paris";
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "de_DE.UTF-8";
+
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";
 environment.etc."polkit-1/rules.d/50-udisks.rules".text = ''
