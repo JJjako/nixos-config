@@ -16,5 +16,7 @@
       enable = true;
     };
   };
-  systemd.extraConfig = "DefaultTimeoutStopSec=10s";
+  systemd.settings.Manager = {
+  DefaultTimeoutStopSec = "10s";
+};
 }
