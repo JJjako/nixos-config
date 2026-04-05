@@ -19,7 +19,7 @@
         host = "JAP";
         hostname = "192.168.178.194";
         user = "wro";
-        identityFile = "~/.ssh/id_robotpi";
+        identityFile = "~/.ssh/id_jap";
         identitiesOnly = true;
       };
     };
