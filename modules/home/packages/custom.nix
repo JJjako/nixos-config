@@ -1,6 +1,3 @@
 { pkgs, ... }:
-{let
-  
-  home.packages = [
-  ];
+{
 }
