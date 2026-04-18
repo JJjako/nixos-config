@@ -4,3 +4,4 @@ Rofi	(cd ~/nixos-config/rofi && ./search)
 Content-search	kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./contentsearch.sh
 Nix-search	kitty -d ~/nixos-config/modules/home/nix-search -e ./nix-search.sh
 Term	(cd ~/nixos-config/rofi && ./term-rofi.sh)
+Cava	kitty -e cava
