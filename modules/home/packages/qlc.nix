@@ -1,5 +1,5 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-  launchpad-control
+  haskellPackages.launchpad-control
   ];}
