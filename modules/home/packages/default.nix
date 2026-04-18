@@ -5,6 +5,5 @@
     ./custom.nix
     ./dev.nix
     ./gui.nix
-    ./qlc.nix
   ];
 }
