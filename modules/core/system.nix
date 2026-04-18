@@ -40,7 +40,6 @@
     fontconfig.dev
     freetype.dev
     pkg-config
-    geogebra6
     rofi-emoji
     vscode
     docker
