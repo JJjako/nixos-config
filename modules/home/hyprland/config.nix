@@ -6,6 +6,7 @@ in
 { 
   wayland.windowManager.hyprland = {
     settings = {
+    "$mainMod" = "SUPER";
       # autostart
       exec-once = [
         # "hash dbus-update-activation-environment 2>/dev/null"
@@ -43,7 +44,6 @@ in
       };
 
       general = {
-        "$mainMod" = "SUPER";
         layout = "dwindle";
         gaps_in = 3;
         gaps_out = 4;
