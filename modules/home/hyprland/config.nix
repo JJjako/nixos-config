@@ -28,12 +28,11 @@ in
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
         "[silent workspace 0] update_timetable"
       ];
-
       input = {
-        kb_layout = "de";
+        kb_layout = "us";
         #kb_options = "grp:alt_caps_toggle";
         numlock_by_default = true;
-	        repeat_delay = 300;
+          repeat_delay = 300;
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
@@ -41,6 +40,7 @@ in
         touchpad = {
           natural_scroll = true;
         };
+      
       };
 
       general = {
