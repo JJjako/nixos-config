@@ -170,6 +170,14 @@ in
         "$mainMod, equal, exec, woomer"
         # "$mainMod SHIFT, W, exec, vm-start"
 
+        #Umlaute
+        "$mainMod, U, exec, wtype ü"
+        "$mainMod SHIFT, U, exec, wtype Ü"
+        "$mainMod, O, exec, wtype ö"
+        "$mainMod SHIFT, O, exec, wtype Ö"
+        "$mainMod, A, exec, wtype ä"
+        "$mainMod SHIFT, A, exec, wtype Ä"
+
         # screenshot
         "$mainMod, C, exec, screenshot --copy"
         "$mainMod, Print, exec, screenshot --save"
