@@ -9,43 +9,31 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hypr-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
-
-    hyprpicker = {
-      url = "github:hyprwm/hyprpicker";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
-
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-      inputs = {
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
-
-    nur.url = "github:nix-community/NUR";
     nix-gaming.url = "github:fufexan/nix-gaming";
-
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    ghostty.url = "github:ghostty-org/ghostty";
+    maple-mono = {
+      url = "github:subframe7536/maple-font?ref=v7.8";
+      flake = false;
+    };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    superfile.url = "github:yorukot/superfile";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake/beta";
   };
 
   outputs =
     { nixpkgs, self, ... }@inputs:
     let
-      username = "jw";
+      username = "frostphoenix";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -68,6 +56,14 @@
           modules = [ ./hosts/laptop ];
           specialArgs = {
             host = "laptop";
+            inherit self inputs username;
+          };
+        };
+        p14s = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/p14s ];
+          specialArgs = {
+            host = "p14s";
             inherit self inputs username;
           };
         };
