@@ -17,6 +17,21 @@
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
+      {
+        name = "zsh-autopair";
+        src = "${pkgs.zsh-autopair}/share/zsh/zsh-autopair";
+        file = "autopair.zsh";
+      }
+      {
+        name = "zig-zsh-completions-plugin";
+        file = "zig-shell-completions.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "ziglang";
+          repo = "shell-completions";
+          rev = "31d3ad12890371bf467ef7143f5c2f31cfa7b7c1";
+          sha256 = "1fzl1x56b4m11wajk1az4p24312z7wlj2cqa3b519v30yz9clgr0";
+        };
+      }
     ];
 
     completionInit = ''

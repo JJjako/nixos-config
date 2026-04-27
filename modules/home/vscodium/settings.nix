@@ -30,6 +30,7 @@
       "workbench.editor.limit.perEditorGroup" = true;
       "workbench.editor.showTabs" = "none";
       "files.autoSave" = "onWindowChange";
+      "files.insertFinalNewline" = true;
       "explorer.openEditors.visible" = 0;
       "breadcrumbs.enabled" = false;
       "editor.renderControlCharacters" = false;
@@ -43,20 +44,20 @@
 
       "editor.mouseWheelZoom" = true;
 
-      # C/C++
+      ## C/C++
       "clangd.arguments" = [
         "--clang-tidy"
         "--inlay-hints=false"
       ];
 
-      # Zig
-      # "zig.initialSetupDone" = true;
-      "zig.checkForUpdate" = false;
-      "zig.zls.path" = "zls";
+      ## Zig
       "zig.path" = "zig";
-      "zig.revealOutputChannelOnFormattingError" = false;
-      "zig.zls.enableInlayHints" = false;
+      "zig.zls.path" = "zls";
+      "zig.zls.enabled" = "on";
+      "zig.zls.warnStyle" = true;
+      "zig.buildOnSaveProvider" = "zls";
 
+      ## Nix
       "nix.serverPath" = "nixd";
       "nix.enableLanguageServer" = true;
       # "nix.serverSettings" = {

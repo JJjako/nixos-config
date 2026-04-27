@@ -1,7 +1,10 @@
-{ pkgs, ... }:
-
+{ pkgs, inputs, ... }:
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  superfile = inputs.superfile.packages.${system}.default;
+in
 {
-  home.packages = with pkgs; [ superfile ];
+  home.packages = [ superfile ];
 
   xdg.configFile."superfile/config.toml".text = ''
     [settings]

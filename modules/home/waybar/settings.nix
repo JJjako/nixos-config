@@ -44,6 +44,7 @@ in
       "battery"
       "hyprland/language"
       "custom/notification"
+      "custom/power-menu"
     ];
     clock = {
       calendar = {
@@ -51,10 +52,10 @@ in
           today = "<span color='#98971A'><b>{}</b></span>";
         };
       };
-      format = "  {:%H:%M}";
+      format = "{:%H:%M}";
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = "  {:%d/%m}";
+      format-alt = "{:%d/%m}";
     };
     "hyprland/workspaces" = {
       active-only = false;
@@ -152,6 +153,8 @@ in
       tooltip-format = "{time}";
     };
     "hyprland/language" = {
+      tooltip = true;
+      tooltip-format = "Keyboard layout";
       format = "<span foreground='#FABD2F'> </span> {}";
       format-fr = "FR";
       format-en = "US";
@@ -166,8 +169,9 @@ in
          
 };
     "custom/notification" = {
-      tooltip = false;
-      format = "{icon} ";
+      tooltip = true;
+      tooltip-format = "Notifications";
+      format = "{icon}";
       format-icons = {
         notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
         none = "  <span foreground='${red}'></span>";
@@ -184,6 +188,12 @@ in
       on-click = "swaync-client -t -sw";
       on-click-right = "swaync-client -d -sw";
       escape = true;
+    };
+    "custom/power-menu" = {
+      tooltip = true;
+      tooltip-format = "Power menu";
+      format = "<span foreground='${red}'> </span>";
+      on-click = "power-menu";
     };
   };
 }

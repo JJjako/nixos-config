@@ -1,6 +1,9 @@
 { pkgs, username, ... }:
 {
-  users.users.${username}.extraGroups = [ "libvirtd" ];
+  # Add user to libvirtd group
+  users.users.${username}.extraGroups = [ "libvirtd" "docker" ];
+
+  # Install necessary packages
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
@@ -12,6 +15,9 @@
     adwaita-icon-theme
   ];
   virtualisation = {
+    docker = {
+      enable = true;
+    };
     libvirtd = {
       enable = true;
       qemu = {

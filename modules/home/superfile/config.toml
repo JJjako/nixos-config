@@ -5,11 +5,12 @@ dir_editor = "nemo"
 
 auto_check_update = false
 
-cd_on_quit = true
+cd_on_quit = false
 shell_close_on_success = true
 
 default_open_file_preview = true
-show_image_preview = false
+show_select_icons = true
+show_image_preview = true
 show_panel_footer_info = true
 file_size_use_si = false
 
@@ -19,7 +20,14 @@ default_sort_type = 0
 sort_order_reversed = false
 case_sensitive_sort = false
 
+file_panel_extra_columns = 0
+file_panel_name_percent = 100
+sidebar_sections = ["home", "pinned"] # "disks"
+
+page_scroll_size = 0
+
 debug = false
+ignore_missing_fields = false
 
 # ========== Style ========== #
 code_previewer = 'bat'
@@ -27,7 +35,8 @@ nerdfont = true
 transparent_background = true
 
 file_preview_width = 0
-sidebar_width = 20
+enable_file_preview_border = true
+sidebar_width = 18
 
 border_top = '─'
 border_bottom = '─'
@@ -44,3 +53,6 @@ border_middle_right = '┤'
 
 metadata = false # needs exiftool
 enable_md5_checksum = false
+zoxide_support = true
+
+[open_with]

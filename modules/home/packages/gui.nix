@@ -2,11 +2,12 @@
 {
   home.packages = with pkgs; [
     ## Multimedia
+    amberol # music player
     audacity
     gimp
+    media-downloader
     obs-studio
     pavucontrol
-    soundwireserver
     video-trimmer
     vlc
 
@@ -17,6 +18,7 @@
     ## Utility
     dconf-editor
     gnome-disk-utility
+    popsicle
     mission-center # GUI resources monitor
     zenity
 

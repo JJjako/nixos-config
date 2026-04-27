@@ -4,10 +4,7 @@
 
   services.flatpak = {
     enable = false;
-    packages = [
-      "com.github.tchx84.Flatseal"
-      "io.github.everestapi.Olympus"
-    ];
+    packages = [ "com.github.tchx84.Flatseal" ];
     overrides = {
       global = {
         # Force Wayland by default

@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   virtualisation.docker.enable = true;
   users.users.jw.extraGroups = [ "docker" ];
@@ -7,6 +7,7 @@
   nix = {
     settings = {
       auto-optimise-store = true;
+      download-buffer-size = 524288000;
       experimental-features = [
         "nix-command"
         "flakes"

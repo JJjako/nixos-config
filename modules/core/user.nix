@@ -12,16 +12,13 @@
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
-      imports =
-        if (host == "desktop") then
-          [ ./../home/default.desktop.nix ]
-        else
-          [ ./../home ];
+      imports = [ ./../home ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
-      home.stateVersion = "24.05";
+      home.stateVersion = "26.05";
       programs.home-manager.enable = true;
     };
+    backupFileExtension = "hm-backup";
   };
 
   users.users.${username} = {

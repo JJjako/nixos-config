@@ -22,8 +22,10 @@
     broot                             # tree files view
    #caligula                          # User-friendly, lightweight TUI for disk imaging
     hyperfine                         # benchmarking tool
+    just                              # command runner (makefile like)
     pastel                            # cli to manipulate colors
-  #  swappy                            # snapshot editing tool
+    scooter                           # Interactive find and replace in the terminal
+    swappy                            # snapshot editing tool
     tdf                               # cli pdf viewer
     tokei                             # project line counter
     translate-shell                   # cli translator
@@ -31,17 +33,13 @@
     #yt-dlp-light
 
     ## TUI
-    # epy                               # ebook reader
+    epy                               # ebook reader
     gtt                               # google translate TUI
-    programmer-calculator
-    #smassh                            # typing test in the terminal
-    #toipe                             # typing test in the terminal
-    tomato-c                          # TUI pomodoro timer
+    toipe                             # typing test in the terminal
+    ttyper                            # cli typing test
 
     ## Monitoring / fetch
     htop
-    fastfetch
-    nitch                             # systhem fetch util
     onefetch                          # fetch utility for git repo
     wavemon                           # monitoring for wireless network devices
 
@@ -60,7 +58,6 @@
     tty-clock
 
     ## Multimedia
-    ani-cli
     imv
     lowfi
     mpv
@@ -77,12 +74,14 @@
     pamixer                           # pulseaudio command line mixer
     playerctl                         # controller for media players
     poweralertd
+    socat
+    udiskie                           # Automounter for removable media
     unzip
     wget
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
     xdg-utils
 
     winetricks
-    wineWowPackages.waylandFull
+    wineWow64Packages.waylandFull
   ];
 }

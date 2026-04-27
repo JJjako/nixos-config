@@ -1,10 +1,13 @@
-{ inputs, ... }:
+{ ... }:
 {
   imports = [
     ./hyprland.nix
-    ./config.nix
+    ./exec-once.nix
+    ./monitors.nix
+    ./settings.nix
+    ./binds.nix
+    ./windowrules.nix
     ./hyprlock.nix
     ./variables.nix
-    inputs.hyprland.homeManagerModules.default
   ];
 }
