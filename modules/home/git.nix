@@ -2,16 +2,14 @@
 {
   programs.git = {
     enable = true;
-
     userName = "JJjako";
     userEmail = "jakob.wiinkler@gmail.com";
-
+    extraConfig = {
       init.defaultBranch = "main";
       merge.conflictstyle = "diff3";
       diff.colorMoved = "default";
       pull.ff = "only";
       color.ui = true;
-
       url = {
         "git@github.com:".insteadOf = [
           "gh:"
@@ -19,7 +17,6 @@
         ];
         "git@github.com:frost-phoenix/".insteadOf = "fp:";
       };
-
       core.excludesFile = "/home/${username}/.config/git/.gitignore";
     };
   };

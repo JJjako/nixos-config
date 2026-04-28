@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, username, ... }:
 {
   virtualisation.docker.enable = true;
-  users.users.jw.extraGroups = [ "docker" ];
+  users.users.${username}.extraGroups = [ "docker" ];
 
   # imports = [ inputs.nix-gaming.nixosModules.default ];
   nix = {
@@ -33,7 +33,7 @@
 
 
   nixpkgs = {
-    overlays = [ inputs.nur.overlays.default ];
+    overlays = [];
   };
   environment.variables = {
      USED_EDITOR = "subl";};
