@@ -1,6 +1,5 @@
 Config	(cd ~/nixos-config/rofi && ./config)
-Config-search	(cd ~/nixos-config/rofi && ./filesearch.sh)
-Rofi	(cd ~/nixos-config/rofi/main/config_search && ./search)
+Config-search	(cd ~/nixos-config/rofi/main/config_search && ./filesearch.sh)
 Term	(cd ~/nixos-config/rofi/main/Term_Ausgeben && ./term-rofi.sh)
 Content-search	kitty -d ~/nixos-config/modules/home/scripts/scripts -e ./contentsearch.sh
 Cava	kitty -e cava
