@@ -43,9 +43,9 @@
 
       "rounding 0, xwayland:1"
 
-      "border_size 0, floating:0, workspace:w[tv1]"
+      "bordersize 0, floating:0, workspace:w[tv1]"
       "rounding 0, floating:0, workspace:w[tv1]"
-      "border_size 0, floating:0, workspace:f[1]"
+      "bordersize 0, floating:0, workspace:f[1]"
       "rounding 0, floating:0, workspace:f[1]"
     ];
 
