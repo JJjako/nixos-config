@@ -6,7 +6,7 @@
       disktree = "ncdu";
       picon = "ssh -i /home/jw/.ssh/id_robotpi 'wro@192.168.178.194'";
       ping = "gping";
-      sn = "subl";
+      sn = "gnome-text-editor";
       u = "update";
       c = "clear";
       cd = "z";
