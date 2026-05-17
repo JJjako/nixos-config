@@ -15,7 +15,7 @@ in
       "$mod, F1, exec, show-keybinds"
       #own
       "$mod, E, exec, kitty -d nixos-config -e superfile"
-      "$mod, M, exec, (cd ~/nixos-config/rofi && ./auswahl)"
+      "$mod, M, exec, (cd ~/nixos-config/rofi/main && ./auswahl)"
       "$mod, L , exec, lofi"
       "$mod, SPACE, togglefloating"
       "$mod, T, exec,  ${terminal} -d ~/nixos-config"
