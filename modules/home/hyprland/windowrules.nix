@@ -35,11 +35,11 @@
       "workspace 10, class:^(WebCord)$"
       "workspace 10, class:^(vesktop)$"
 
-      "idle_inhibit focus, class:^(mpv)$"
-      "idle_inhibit focus, class:^(zen-beta)$, title:^(.*YouTube.*)$"
-      "idle_inhibit fullscreen, class:^(zen)$"
+      "idleinhibit focus, class:^(mpv)$"
+      "idleinhibit focus, class:^(zen-beta)$, title:^(.*YouTube.*)$"
+      "idleinhibit fullscreen, class:^(zen)$"
 
-      "dim_around, class:^(xdg-desktop-portal-gtk)$"
+      "dimaround, class:^(xdg-desktop-portal-gtk)$"
 
       "rounding 0, xwayland:1"
 
@@ -50,8 +50,8 @@
     ];
 
     layerrule = [
-      "dim_around, namespace:rofi"
-      "dim_around, namespace:swaync-control-center"
+      "dimaround, namespace:rofi"
+      "dimaround, namespace:swaync-control-center"
     ];
 
     workspace = [
