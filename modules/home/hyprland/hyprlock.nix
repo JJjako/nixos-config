@@ -25,7 +25,7 @@
         {
           size = "300, 50";
 
-          rounding = 0;
+          rounding = 5;
           border_size = 2;
           color = "rgba(102, 92, 84, 0.33)";
           border_color = "rgba(168, 153, 132, 0.95)";
@@ -83,7 +83,7 @@
       input-field = [
         {
           size = "300, 50";
-          rounding = 0;
+          rounding = 5;
           outline_thickness = 2;
 
           dots_spacing = 0.4;
