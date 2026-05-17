@@ -1,8 +1,7 @@
 { pkgs, inputs, username, ... }:
 {
   virtualisation.docker.enable = true;
-  users.users.${username}.extraGroups = [ "docker" ];
-
+  
   # imports = [ inputs.nix-gaming.nixosModules.default ];
   nix = {
     settings = {

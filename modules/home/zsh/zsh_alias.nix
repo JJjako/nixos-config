@@ -36,7 +36,7 @@
       nb = "nom build";
       nc = "nh-notify nh clean all --keep 5";
       nft = "nh-notify nh os test";
-      nfs = "nh-notify nh os switch";
+      nrs = "nh-notify nh os switch";
       nfu = "nh-notify nh os switch --update";
       nsearch = "nh search";
 

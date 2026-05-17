@@ -5,5 +5,6 @@
     ./dev.nix
     ./gui.nix
     ./nix.nix
+    ./qlc.nix
   ];
 }

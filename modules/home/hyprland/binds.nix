@@ -1,5 +1,9 @@
 { ... }:
-{
+let
+  browser = "firefox";
+  terminal = "kitty";
+in
+{ 
   wayland.windowManager.hyprland.settings = {
     binds = {
       scroll_event_delay = 100;
@@ -9,12 +13,18 @@
     bind = [
       # show keybinds list
       "$mod, F1, exec, show-keybinds"
-
+      #own
+      "$mod, E, exec, kitty -d nixos-config -e superfile"
+      "$mod, M, exec, (cd ~/nixos-config/rofi && ./auswahl)"
+      "$mod, L , exec, lofi"
+      "$mod, SPACE, togglefloating"
+      "$mod, T, exec,  ${terminal} -d ~/nixos-config"
+      "$mod, B, exec, firefox"
       # keybindings
       "$mod, Return, exec, ghostty --gtk-single-instance=true"
       "ALT, Return, exec, [float; size 1111 700] ghostty"
       "$mod SHIFT, Return, exec, [fullscreen] ghostty"
-      "$mod, B, exec, [workspace 1 silent] zen-beta"
+      
       "$mod, Q, killactive,"
       "$mod, F, fullscreen, 0"
       "$mod SHIFT, F, fullscreen, 1"
@@ -26,7 +36,6 @@
       "$mod SHIFT, Escape, exec, power-menu"
       "$mod, P, pseudo,"
       "$mod, X, togglesplit,"
-      "$mod, T, exec, toggle-oppacity"
       "$mod, E, exec, nemo"
       "ALT, E, exec, hyprctl dispatch exec '[float; size 1111 700] nemo'"
       "$mod SHIFT, B, exec, toggle-waybar"

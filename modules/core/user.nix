@@ -25,9 +25,12 @@
     isNormalUser = true;
     description = "${username}";
     extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
+  "networkmanager"
+  "wheel"
+  "dialout"
+  "docker"
+  "libvirtd"
+];
     shell = pkgs.zsh;
   };
   nix.settings.allowed-users = [ "${username}" ];
