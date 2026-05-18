@@ -35,11 +35,7 @@
       "workspace 10, class:^(WebCord)$"
       "workspace 10, class:^(vesktop)$"
 
-      "idleinhibit focus, class:^(mpv)$"
-      "idleinhibit focus, class:^(zen-beta)$, title:^(.*YouTube.*)$"
-      "idleinhibit fullscreen, class:^(zen)$"
-
-      "dimaround, class:^(xdg-desktop-portal-gtk)$"
+     
 
       "rounding 0, xwayland:1"
 
@@ -47,11 +43,6 @@
       "rounding 0, floating:0, workspace:w[tv1]"
       "bordersize 0, floating:0, workspace:f[1]"
       "rounding 0, floating:0, workspace:f[1]"
-    ];
-
-    layerrule = [
-      "dimaround, namespace:rofi"
-      "dimaround, namespace:swaync-control-center"
     ];
 
     workspace = [
