@@ -1,6 +1,5 @@
 { ... }:
 {
-  {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
       "float, class:^(imv)$"
@@ -42,5 +41,4 @@
       "f[1], gapsout:0, gapsin:0"
     ];
   };
-
 }
