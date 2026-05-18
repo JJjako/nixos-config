@@ -1,7 +1,7 @@
 { ... }:
 {
   wayland.windowManager.hyprland.settings = {
-    windowrule = [
+    windowrulev2 = [
       "float, class:^(imv)$"
       "float, class:^(mpv)$"
       "float, class:^(zenity)$"
@@ -28,8 +28,6 @@
       "workspace 10, class:^(discord)$"
       "workspace 10, class:^(WebCord)$"
       "workspace 10, class:^(vesktop)$"
-    ];
-    windowrulev2 = [
       "rounding 0, xwayland:1"
       "bordersize 0, floating:0, workspace:w[tv1]"
       "rounding 0, floating:0, workspace:w[tv1]"
